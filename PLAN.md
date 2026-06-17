@@ -5,35 +5,57 @@
 
 ---
 
-## FASE 0 — Raccolta Contatti B2B (ORA)
+## FASE 0 — Raccolta Contatti B2B
 
-**Obiettivo:** Fornire a Morel un CRM già popolato con ~100 contatti profilati, pronto da chiamare.
+> **Stato:** 371 contatti raccolti con 327 telefoni (88% copertura). Pronto per CRM.
+> **Script:** `scrape_contatti.py` (PagineGialle via Playwright headed)
 
-### 0.1 Setup strumentazione (Marco)
+### 0.1 Fonti disponibili — ordinate per potenziale
 
-- [x] Script scraping multi-categoria su Varese/Como/Gallarate/Busto
-- [ ] Generare CSV pronto per Google Sheets con colonne:
-  - Nome Azienda, Indirizzo, Tipologia, Telefono, Email, Sito, Descrizione Business, Note
-- [ ] Importare CSV in Google Sheets condiviso con Morel
-- [ ] Aggiungere colonne CRM: Stato (Da Contattare/Contattato/Appuntamento/Check Fatto/Cliente), Data Contatto, Note Chiamata
+| # | Fonte | Contatti stimati | Telefoni | Siti | Costo | Difficolta | Stato |
+|---|-------|:---:|:---:|:---:|---|---|---|
+| 1 | **PagineGialle — search results + pagination** | 2,000-5,000 | 85% | 30% (detail pages) | Gratis | Media | **IN CORSO** — 371 ottenuti, da estendere con paginazione e piu citta |
+| 2 | **OpenStreetMap Overpass API** | 500-1,500 | 25% | 30% | Gratis | Bassa | **FATTO** — 309 contatti (low phone coverage) |
+| 3 | **Google Maps — SerpAPI o BrightData** | 1,000-3,000 | 90% | 70% | €50-100 API key | Bassa | Da valutare |
+| 4 | **Camera di Commercio / Registro Imprese** | 5,000+ aziende | 0% (no tel) | 40% | Gratis (visura) | Alta | Da valutare — no telefoni |
+| 5 | **Acquistare liste B2B (Cerved, Kompass)** | 500-2,000 | 90% | 80% | €100-500 | Molto Bassa | Opzione fast — pre-filtrate e verificate |
+| 6 | **TheFork scraping** (solo ristoranti) | 200-500 | 50% | 80% | Gratis | Media | Solo ristoranti, non prioritario |
+| 7 | **LinkedIn Sales Navigator** | 200-500 aziende | 0% | 70% | €80/mese | Bassa | Nomi azienda + decision maker, zero telefoni |
+| 8 | **PagineBianche** (elenco telefonico) | 10,000+ | 100% | 0% | Gratis | Media | Solo telefoni + indirizzi, no categoria |
 
-### 0.2 Categorie target
+### 0.2 Raccomandazione
 
-| # | Categoria | Keyword PagineGialle | Citta |
-|---|-----------|---------------------|-------|
-| 1 | Ristoranti/Pizzerie | ristoranti, pizzerie | Varese, Como, Gallarate, Busto Arsizio |
-| 2 | Palestre/Centri Sportivi | palestre, centri sportivi | Varese, Como, Gallarate, Busto Arsizio |
-| 3 | Officine/Artigiani | officine meccaniche, falegnamerie | Varese, Como, Gallarate, Busto Arsizio |
-| 4 | Lavanderie Industriali | lavanderie industriali, tintorie | Varese, Como, Gallarate, Busto Arsizio |
-| 5 | Hotel/B&B | hotel, bed and breakfast | Como, Varese, Lago Maggiore |
+1. **Completare PagineGialle** con paginazione + piu citta (Saronno, Cantu, Luino, Tradate, Erba, Mariano, Olgiate, Verbania, Stresa) → target **800-1,500 contatti**
+2. **Fondere** i 309 contatti OSM gia raccolti con i 371 PagineGialle → deduplica
+3. **Opzionale:** acquistare lista verificata da Cerved/Kompass per categorie mancanti (€200-300)
 
-### 0.3 Esecuzione
+### 0.3 CSV Output
+
+- [x] `contatti_b2b.csv` generato (371 contatti, 327 con telefono)
+- [ ] Colonne: Nome, Indirizzo, Categoria, Citta, Telefono, Sito, Descrizione, Note
+- [ ] Importare in Google Sheets condiviso con Morel
+- [ ] Aggiungere colonne CRM: Stato (Da Contattare → Contattato → Appuntamento → Check → Cliente), Data Contatto, Note Chiamata
+
+### 0.4 Categorie target coperte
+
+| Categoria | Contatti | Con telefono |
+|-----------|:---:|:---:|
+| Ristoranti/Pizzerie | 141 | 110 |
+| Hotel/B&B | 74 | 72 |
+| Palestre/Centri Sportivi | 72 | 72 |
+| Officine/Artigiani | 53 | 53 |
+| Lavanderie Industriali | 31 | 31 |
+
+### 0.5 Citta coperte
+
+Varese, Como, Gallarate, Busto Arsizio, Verbania.
+Da aggiungere: Saronno, Cantu, Luino, Tradate, Erba, Mariano Comense, Olgiate Comasco, Laveno, Stresa, Baveno.
+
+### 0.6 Esecuzione
 
 ```bash
 python scrape_contatti.py
 ```
-
-**Output:** `contatti_b2b.csv` con ~100 contatti profilati.
 
 ---
 
