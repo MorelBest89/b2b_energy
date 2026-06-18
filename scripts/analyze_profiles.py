@@ -1,142 +1,331 @@
-"""FASE 4 v3: Generate structured profiles + scores from full site texts."""
+"""FASE 4 v4: AI-quality profiles from site analysis + refined scoring."""
 import csv, json, os, re, sys
 from collections import Counter
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 BASE = r"C:\Users\marco\Projects\consulenza_energy"
-CSV_PATH = os.path.join(BASE, "data", "contatti_b2b.csv")
 JSON_PATH = os.path.join(BASE, "data", "site_texts.json")
+CSV_IN = os.path.join(BASE, "data", "contatti_b2b.csv")
+CSV_OUT = os.path.join(BASE, "data", "contatti_final.csv")
 
-with open(CSV_PATH, "r", encoding="utf-8-sig") as f:
+with open(CSV_IN, "r", encoding="utf-8-sig") as f:
     all_rows = list(csv.DictReader(f))
 
 with open(JSON_PATH, "r", encoding="utf-8") as f:
-    site_texts = json.load(f)
+    raw_sites = json.load(f)
+
+site_texts = {}
+for k, v in raw_sites.items():
+    if v:
+        site_texts[int(k)] = v
 
 print(f"Contacts: {len(all_rows)} | Site texts: {len(site_texts)}")
 
-# ── SCORING ENGINE ──────────────────────────────────────────────
+# Map sites by URL: for each original index, look up the URL in the CURRENT CSV
+# Then map URL -> data for matching
+url_map = {}
+for idx, data in site_texts.items():
+    if idx < len(all_rows):
+        row_url = all_rows[idx].get("sito", "").strip()
+        if row_url:
+            url_map[row_url] = data
+    # Also try matching by name substring for edge cases
+    if idx >= len(all_rows):
+        # Index out of bounds: try to find by scanning smaller range
+        for i, r in enumerate(all_rows):
+            if r.get("sito","").strip() and data.get("title",""):
+                # Check if row name appears in site title or vice versa
+                rname = r["nome"].lower()[:20]
+                stitle = data.get("title","").lower()
+                if rname in stitle or stitle[:20] in rname:
+                    url = r["sito"].strip()
+                    if url and url not in url_map:
+                        url_map[url] = data
+                        break
 
-# Category baseline score (energy consumption potential)
-CAT_BASELINE = {
-    "Ristoranti/Pizzerie": 9,
-    "Hotel/B&B": 8,
-    "Palestre": 7,
-    "Officine/Artigiani": 6,
-    "Lavanderie": 7,
-}
+print(f"URL map entries: {len(url_map)}")
 
-# High-energy keywords (raise score)
-ENERGY_KW = {
-    "forno": 1, "cucina": 1, "cella frigo": 1, "frigorifero": 1, "refrigerazione": 1,
-    "climatizzatore": 1, "aria condizionata": 1, "condizionamento": 1, "hvac": 1,
-    "caldaia": 1, "riscaldamento": 1, "pompa di calore": 1, "pdc": 1,
-    "piscina": 1, "sauna": 1, "bagno turco": 1, "spa": 1,
-    "lavatrice": 1, "asciugatrice": 1, "lavaggio industriale": 1, "tintoria": 1,
-    "compressore": 1, "tornio": 1, "fresa": 1, "saldatrice": 1,
-    "illuminazione": 1, "led": 1, " lampada": 1,
-    "camera": 0.5, "suite": 0.5, "stanza": 0.5, "coperto": 0.5,
-}
+def safe_text(data):
+    if not data: return ""
+    return f"{data.get('title','')} {data.get('meta','')} {data.get('text','')}".lower()
 
-# Low-energy / micro business keywords (lower score)
-LOW_KW = {
-    "freelance": -2, "libero professionista": -2, "consulenza": -1,
-    "personal trainer": -1, "pt ": -1, "coach online": -1,
-    "domicilio": -1, "a casa": -1, "one person": -2, "solo": -1,
-    "studio privato": -1, "ufficio": -1, "coworking": -1,
-}
+# ── BUSINESS TYPE DETECTION ─────────────────────────────────────
+def detect_business_type(cat, text):
+    """Detect specific business subtype from website text."""
+    t = text.lower()
+    if cat == "Ristoranti/Pizzerie":
+        if "pizzeria" in t or "pizza" in t and "pizzeria" in t: return "pizzeria"
+        if "kebab" in t: return "kebab/grill"
+        if "sushi" in t or "giapponese" in t: return "ristorante giapponese"
+        if "cinese" in t: return "ristorante cinese"
+        if "steakhouse" in t or "grill" in t: return "steakhouse/grill"
+        if "agriturismo" in t: return "agriturismo"
+        if "bar" in t and "caffe" in t: return "bar/caffetteria"
+        if "gelateria" in t or "gelato" in t: return "gelateria"
+        return "ristorante"
+    elif cat == "Hotel/B&B":
+        if "5 stelle" in t or "lusso" in t: return "hotel di lusso"
+        if "4 stelle" in t: return "hotel 4 stelle"
+        if "3 stelle" in t: return "hotel 3 stelle"
+        if "b&b" in t or "bed and breakfast" in t: return "bed & breakfast"
+        if "agriturismo" in t: return "agriturismo"
+        if "ostello" in t or "hostel" in t: return "ostello"
+        return "hotel"
+    elif cat == "Palestre":
+        if "crossfit" in t: return "box crossfit"
+        if "yoga" in t or "pilates" in t: return "studio yoga/pilates"
+        if "piscina" in t: return "centro sportivo con piscina"
+        if "personal" in t and "trainer" in t and "palestra" not in t: return "personal trainer"
+        return "palestra"
+    elif cat == "Officine/Artigiani":
+        if "carrozzeria" in t: return "carrozzeria"
+        if "gommista" in t or "pneumatici" in t: return "gommista"
+        if "elettrauto" in t: return "elettrauto"
+        if "meccanica di precisione" in t: return "meccanica di precisione"
+        if "revisione" in t: return "centro revisioni"
+        if "officina" in t: return "officina meccanica"
+        return "officina"
+    elif cat == "Lavanderie":
+        if "industriale" in t: return "lavanderia industriale"
+        if "tintoria" in t: return "tintoria"
+        if "noleggio" in t: return "noleggio biancheria"
+        return "lavanderia"
+    return cat.lower()
 
-def safe_text(site_data):
-    if not site_data:
-        return ""
-    title = site_data.get("title", "")
-    meta = site_data.get("meta", "")
-    text = site_data.get("text", "")
-    return f"{title} {meta} {text}".lower()
+# ── SIZE DETECTION ──────────────────────────────────────────────
+def detect_size(text):
+    """Detect business size from text."""
+    t = text.lower()
+    # Count rooms (hotels)
+    rooms = re.findall(r'(\d+)\s*(camere?|stanze?|room)', t)
+    if rooms:
+        n = max(int(m[0]) for m in rooms)
+        if n > 50: return "grande", n
+        if n > 15: return "medio", n
+        if n > 3: return "piccolo", n
+    # Count seats (restaurants)
+    seats = re.findall(r'(\d+)\s*(posti|coperti|persone)', t)
+    if seats:
+        n = max(int(m[0]) for m in seats)
+        if n > 100: return "grande", n
+        if n > 40: return "medio", n
+        return "piccolo", n
+    # Employees
+    employees = re.findall(r'(\d+)\s*(dipendenti|collaboratori|addetti)', t)
+    if employees:
+        n = max(int(m[0]) for m in employees)
+        if n > 20: return "grande", n
+        if n > 5: return "medio", n
+        return "piccolo", n
+    # Multiple locations
+    locs = re.findall(r'(\d+)\s*(sedi?|filiali|stabilimenti|punti vendita)', t)
+    if locs and int(locs[0][0]) > 1:
+        return "grande", int(locs[0][0])
+    return "", 0
 
-def analyze(r, site_data):
+# ── ENERGY EQUIPMENT ────────────────────────────────────────────
+def detect_energy(text):
+    """Detect energy-relevant equipment and features."""
+    t = text.lower()
+    findings = {}
+    if any(w in t for w in ["forno", "cucina", "cella frigo", "frigorifero", "abbattitore"]):
+        findings["cucina"] = "attrezzatura cucina/refrigerazione"
+    if any(w in t for w in ["piscina", "spa", "idromassaggio", "sauna", "bagno turco"]):
+        findings["piscina/spa"] = "piscina e/o centro benessere"
+    if any(w in t for w in ["climatizzatore", "aria condizionata", "condizionamento"]):
+        findings["clima"] = "impianti di climatizzazione"
+    if any(w in t for w in ["caldaia", "riscaldamento", "pompa di calore", "termico"]):
+        findings["riscaldamento"] = "impianto termico/caldaia"
+    if any(w in t for w in ["lavatrice", "asciugatrice", "lavaggio", "tintoria"]):
+        findings["lavaggio"] = "macchinari lavaggio/asciugatura"
+    if any(w in t for w in ["compressore", "tornio", "fresa", "saldatrice", "pressa"]):
+        findings["macchinari"] = "macchinari industriali"
+    if any(w in t for w in ["illuminazione", "led", "lampada", "neon"]):
+        findings["luci"] = "impianto illuminazione"
+    if any(w in t for w in ["camera", "suite", "stanza"]) and "Hotel" in text:
+        findings["camere"] = "camere con gestione energetica"
+    return findings
+
+# ── IDENTIFY MICRO BUSINESS ────────────────────────────────────
+def is_micro(text):
+    t = text.lower()
+    indicators = ["freelance", "libero professionista", "one person", "a domicilio",
+                  "personal trainer", "personal training", "coach online",
+                  "studio privato", "coworking", "un solo", "lavoro da casa",
+                  "mi piace: ", "facebook", "segui", "iscriviti"]
+    score = sum(1 for w in indicators if w in t)
+    return score >= 2
+
+# ── MAIN PROFILE GENERATOR ──────────────────────────────────────
+def generate_profile(r, site_data):
     cat = r["categoria"]
     name = r["nome"]
+    city = r["citta"]
     full_text = safe_text(site_data)
     
-    if not full_text:
-        return {
-            "descrizione": "Nessuna informazione disponibile dal sito web",
-            "punteggio": CAT_BASELINE.get(cat, 5),
-            "note": "",
-        }
+    btype = detect_business_type(cat, full_text)
+    size, size_n = detect_size(full_text)
+    energy = detect_energy(full_text if site_data else "")
+    micro = is_micro(full_text)
     
-    # Score calculation
-    score = CAT_BASELINE.get(cat, 5)
+    phone = r["telefono"].strip()
+    website = r.get("sito", "").strip()
+    has_phone = bool(phone)
+    has_web = bool(website.startswith("http"))
+    has_text = bool(full_text)
     
-    # Add for energy keywords
-    energy_hits = []
-    for kw, pts in ENERGY_KW.items():
-        if kw in full_text:
-            energy_hits.append(kw)
-            score += pts
+    # ── SCORE ──────────────────────────────────────────────────
+    score = 0
     
-    # Subtract for low-energy indicators
-    low_hits = []
-    for kw, pts in LOW_KW.items():
-        if kw in full_text:
-            low_hits.append(kw)
-            score += pts
+    # Base: category fit (how well this category matches our ideal client)
+    cat_score = {
+        "Ristoranti/Pizzerie": 9,  # Max energy consumption (cooking + HVAC + refrigeration)
+        "Hotel/B&B": 9,            # Max energy (rooms + restaurant + pool + common areas)
+        "Palestre": 7,             # High (showers + HVAC + lighting)
+        "Lavanderie": 7,           # High (washing machines + dryers)
+        "Officine/Artigiani": 6,   # Medium (machinery, compressors)
+    }
+    score = cat_score.get(cat, 5)
     
-    # Normalize to 1-10
+    # Size adjustments
+    if size == "grande": score = min(10, score + 1)
+    elif size == "piccolo" and not energy: score = max(1, score - 1)
+    
+    # Energy equipment bonus
+    if len(energy) >= 3: score = min(10, score + 1)
+    elif len(energy) >= 1: score = min(10, score + 0.5)
+    if not energy: score = max(1, score - 1)
+    
+    # Micro business penalty
+    if micro: score = max(1, score - 3)
+    
+    # Data quality penalties
+    if not has_text: score = max(1, score - 2)
+    if not has_web: score = max(1, score - 1)
+    if not has_phone: score = max(1, score - 1)
+    
     score = max(1, min(10, round(score)))
     
-    # Build description
-    title = site_data.get("title", "") if site_data else ""
-    meta = site_data.get("meta", "") if site_data else ""
-    text = site_data.get("text", "") if site_data else ""
+    # ── DESCRIPTION ────────────────────────────────────────────
+    if not has_text:
+        desc = f"{name} e' un {btype} a {city}. {_no_info_note(cat)}"
+        note = "Nessun sito web disponibile per analisi approfondita"
+        return desc, score, note
     
-    # Clean text: remove excess whitespace
-    clean_text = re.sub(r'\s+', ' ', (meta + " " + text)[:800]).strip()
+    # Build rich description
+    parts = []
     
-    # Build call suggestions based on energy keywords found
+    # 1. Who they are
+    size_desc = ""
+    if size == "grande": size_desc = "di grandi dimensioni"
+    elif size == "medio": size_desc = "di medie dimensioni"
+    
+    a = "un'" if btype.startswith(("a","e","i","o")) else "un "
+    parts.append(f"{name} e' {a}{btype} {size_desc}a {city}.")
+    
+    # 2. What they offer (from site analysis)
+    site_text = site_data.get("text", "")
+    meta = site_data.get("meta", "")
+    
+    # Extract key services from meta or first meaningful sentences
+    services = []
+    if meta:
+        services.append(meta[:200])
+    else:
+        sentences = re.split(r'[.!?]+', site_text)
+        for s in sentences[:5]:
+            s = s.strip()
+            if len(s) > 40 and not s.startswith(("cookie", "privacy", "policy")):
+                services.append(s)
+                if len(services) >= 2: break
+    
+    if services:
+        parts.append("Offre: " + "; ".join(s[:120] for s in services[:2]) + ".")
+    
+    # 3. Energy-relevant equipment
+    if energy:
+        kit = ", ".join(list(energy.values())[:4])
+        parts.append(f"Dispone di: {kit}.")
+    
+    # 4. How we can help (based on energy findings)
+    help_text = _generate_help(energy, cat, btype, size, has_text)
+    if help_text:
+        parts.append(help_text)
+    
+    desc = " ".join(parts)[:2500]
+    
+    # ── NOTE (call suggestions) ────────────────────────────────
+    suggestions = _generate_suggestions(energy, cat, btype)
+    
+    # Add data quality notes
+    dq = []
+    if not has_web: dq.append("SITO MANCANTE")
+    if not has_phone: dq.append("TEL MANCANTE")
+    if dq: suggestions.append("ATTENZIONE: " + ", ".join(dq))
+    
+    note = " | ".join(suggestions)[:500]
+    
+    return desc, score, note
+
+
+def _no_info_note(cat):
+    if cat in ("Ristoranti/Pizzerie", "Hotel/B&B"):
+        return "Potenziale alto per check energetico (cucina, HVAC). Da contattare per verificare."
+    return "Da contattare per verificare esigenze energetiche."
+
+def _generate_help(energy, cat, btype, size, has_text):
+    if not has_text: return ""
+    if not energy: return "Potenziale da verificare con check energetico per identificare margini di risparmio."
+    
+    parts = []
+    if "cucina" in energy:
+        parts.append("riduzione costi energetici della cucina")
+    if "clima" in energy:
+        parts.append("efficientamento climatizzazione")
+    if "riscaldamento" in energy:
+        parts.append("verifica rendimento caldaia/impianto termico")
+    if "piscina/spa" in energy:
+        parts.append("abbattimento costi riscaldamento piscina/spa")
+    if "camere" in energy:
+        parts.append("gestione energetica camere (chiave magnetica, termostati)")
+    if "luci" in energy:
+        parts.append("relamping LED con payback 8-12 mesi")
+    if "lavaggio" in energy:
+        parts.append("ottimizzazione cicli lavaggio/asciugatura")
+    if "macchinari" in energy:
+        parts.append("analisi consumi macchinari e rifasamento")
+    
+    if parts:
+        return f"M&M Energy puo' intervenire su: {', '.join(parts)}."
+    return ""
+
+def _generate_suggestions(energy, cat, btype):
     sugg = []
-    if any(kw in full_text for kw in ["forno", "cucina", "cella frigo", "frigorifero"]):
-        sugg.append("Menzionare risparmio su refrigerazione e cottura")
-    if any(kw in full_text for kw in ["climatizzatore", "aria condizionata", "condizionamento", "hvac"]):
-        sugg.append("Focus su efficientamento climatizzazione")
-    if any(kw in full_text for kw in ["caldaia", "riscaldamento", "pompa di calore"]):
-        sugg.append("Proporre check caldaia/impianto termico")
-    if any(kw in full_text for kw in ["piscina", "sauna", "spa"]):
-        sugg.append("Evidenziare costi energetici piscina/spa/wellness")
-    if any(kw in full_text for kw in ["lavatrice", "asciugatrice", "lavaggio industriale"]):
-        sugg.append("Ottimizzazione ciclo lavaggio e asciugatura")
-    if any(kw in full_text for kw in ["compressore", "tornio", "fresa", "saldatrice"]):
-        sugg.append("Analisi consumi macchinari e rifasamento")
-    if any(kw in full_text for kw in ["illuminazione", "led", "lampada"]):
-        sugg.append("Relamping LED con payback 8-12 mesi")
-    if any(kw in full_text for kw in ["camera", "suite", "stanza"]):
-        sugg.append("Chiave magnetica spegni-tutto per camere")
+    if "cucina" in energy:
+        sugg.append("Check consumi cucina (forni, celle frigo, abbattitori)")
+    if "clima" in energy:
+        sugg.append("Audit climatizzazione (split, canalizzati, pompe di calore)")
+    if "piscina/spa" in energy:
+        sugg.append("Costo energetico piscina/Spa: 30-50% della bolletta. Prioritario.")
+    if "camere" in energy:
+        sugg.append("Proporre chiave magnetica spegni-tutto per camere")
+    if "luci" in energy:
+        sugg.append("Relamping LED: si ripaga in meno di 12 mesi")
+    if "riscaldamento" in energy:
+        sugg.append("Verifica rendimento caldaia: se <80%, sostituzione paga da sola")
+    if "macchinari" in energy:
+        sugg.append("Rifasamento per eliminare penali energia reattiva")
+    if "lavaggio" in energy:
+        sugg.append("Ciclo lavaggio: ogni grado in meno = 5% risparmio energetico")
     
     if not sugg:
-        sugg.append("Check energetico completo con termocamera")
+        sugg.append(f"Check energetico base con termocamera: identificare dispersioni e priorita' intervento")
     
-    # Build structured profile
-    profilo = (
-        f"[{title[:120]}] "
-        f"{clean_text[:500]}"
-    )
-    
-    if sugg:
-        profilo += " | SUGGERIMENTI: " + "; ".join(sugg)
-    
-    note = ""
-    if energy_hits:
-        note = f"Consumi: {', '.join(energy_hits[:5])}"
-    
-    return {
-        "descrizione": profilo[:3000],
-        "punteggio": score,
-        "note": note,
-    }
+    return sugg
 
-# ── PROCESS ────────────────────────────────────────────────────
+
+# ── EXECUTE ─────────────────────────────────────────────────────
 enriched = 0
 removed = 0
 kept = []
@@ -150,53 +339,47 @@ for i, r in enumerate(all_rows):
         removed += 1
         continue
     
-    # If no site, keep as-is with baseline score
-    if not site.startswith("http"):
-        r["punteggio"] = str(CAT_BASELINE.get(r["categoria"], 5))
-        kept.append(r)
-        continue
+    data = None
+    # Try URL match first (most reliable)
+    if site.startswith("http") and site in url_map:
+        data = url_map[site]
+    # Fall back to index
+    if not data:
+        data = site_texts.get(i)
+    desc, score, note = generate_profile(r, data)
+    r["descrizione"] = desc
+    r["punteggio"] = str(score)
+    r["note"] = note
     
-    # Analyze site
-    data = site_texts.get(str(i))
     if data:
-        profile = analyze(r, data)
-        r["descrizione"] = profile["descrizione"]
-        r["punteggio"] = str(profile["punteggio"])
-        if "note" in profile and profile["note"]:
-            r["note"] = profile["note"]
         enriched += 1
-    else:
-        r["descrizione"] = "[SITO NON RAGGIUNGIBILE]"
-        r["punteggio"] = str(CAT_BASELINE.get(r["categoria"], 5))
     
     kept.append(r)
 
-# Save with new columns
-out_path = os.path.join(BASE, "data", "contatti_b2b.csv")
-tmp_path = os.path.join(BASE, "data", "contatti_enriched.csv")
 fieldnames = ["fonte","categoria","citta","nome","indirizzo","telefono","sito","descrizione","note","punteggio"]
-with open(tmp_path, "w", newline="", encoding="utf-8-sig") as f:
+with open(CSV_OUT, "w", newline="", encoding="utf-8-sig") as f:
     w = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
     w.writeheader()
     w.writerows(kept)
 
 # ── REPORT ─────────────────────────────────────────────────────
-print(f"\nFASE 4 v3 COMPLETA")
-print(f"  Rimosse (no tel + no web): {removed}")
-print(f"  Inserite: {len(kept)}")
-print(f"  Profili generati: {enriched}")
+print(f"\nRimosse (no tel + no web): {removed}")
+print(f"Inserite: {len(kept)}  |  Profili generati: {enriched}")
 
 scores = [int(r["punteggio"]) for r in kept if r.get("punteggio", "").isdigit()]
 if scores:
-    print(f"  Score medio: {sum(scores)/len(scores):.1f}")
-    for s, n in Counter(scores).most_common():
-        bar = "█" * n
-        print(f"    {s:>2}: {bar} ({n})")
+    print(f"Score medio: {sum(scores)/len(scores):.1f}")
+    sc = Counter(scores)
+    for s in range(10, 0, -1):
+        n = sc.get(s, 0)
+        bar = "█" * (n // 10)
+        print(f"  {s:>2}: {bar} ({n})")
 
-# Category breakdown
-cat_counts = Counter(r["categoria"] for r in kept)
-for c, n in cat_counts.most_common():
-    ph = sum(1 for r in kept if r["categoria"]==c and r["telefono"].strip())
-    wb = sum(1 for r in kept if r["categoria"]==c and r["sito"].strip().startswith("http"))
-    desc = sum(1 for r in kept if r["categoria"]==c and r["descrizione"].strip() and "[SITO NON" not in r["descrizione"] and "Nessuna informazione" not in r["descrizione"])
-    print(f"  {c}: {n} (tel:{ph} web:{wb} desc:{desc})")
+print()
+for c in Counter(r["categoria"] for r in kept).most_common():
+    cat = c[0]
+    n = c[1]
+    ph = sum(1 for r in kept if r["categoria"]==cat and r["telefono"].strip())
+    wb = sum(1 for r in kept if r["categoria"]==cat and r["sito"].strip().startswith("http"))
+    avg = sum(int(r["punteggio"]) for r in kept if r["categoria"]==cat and r.get("punteggio","").isdigit()) / max(1, n)
+    print(f"  {cat}: {n}  tel:{ph}  web:{wb}  avg_score:{avg:.1f}")
