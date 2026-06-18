@@ -64,9 +64,17 @@
 | | Lavand. | ✅13 | - | - | ✅64 | - | - | ✅5 | - | - | - | - | - | ✅15 | ✅13 | ✅9 | - | ✅5 | - | ✅2 | - | **126** |
 | | Hotel | ✅172 | - | - | ✅165 | - | - | ✅155 | - | ✅136 | - | ✅142 | - | - | - | - | ✅61 | - | ✅140 | ✅96 | **1.096** |
 | **OpenStreetMap** | Tutte | 309 totali (25% telefono, archiviati separatamente) |
-| **Google Maps** | Tutte | ⬜ |
+| **Google Maps** | Tutte | ✅ 1.461 contatti, 95% tel, 76% web (dettaglio in data/contatti_googlemaps.csv) |
 | **Liste B2B** | Tutte | ⬜ |
 | **TheFork** | Rist. | ⬜ |
+
+### 0.5.1 — RIEPILOGO FINALE
+
+| Fonte | Contatti | Tel | Web | Stato |
+|---|---|---|---|---|
+| PagineGialle (screened) | 2.082 | 1.993 (95%) | 0 (0%) | ✅ |
+| Google Maps API | 1.461 | 1.393 (95%) | 1.119 (76%) | ✅ |
+| **TOTALE MERGED** | **3.543** | **3.386 (95%)** | **1.123 (31%)** | ✅ |
 
 ### 0.6 Esecuzione
 

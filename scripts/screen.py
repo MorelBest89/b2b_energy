@@ -55,6 +55,18 @@ REJECT_NAMES = {
     "accesso disabili", "carte di credito", "carta di credito",
     "pagamento contactless", "pagamento digitale",
     "consegna a domicilio gratuita",
+    # More service labels found in data
+    "spiaggia privata", "servizio taxi", "check-in 24 ore", "check-in 24h",
+    "ristorante con giardino", "ristorante con terrazza", "sala privata",
+    "cucina senza glutine", "forno a legna", "prenotazione online",
+    "servizio catering", "servizio delivery", "servizio in camera",
+    "colazione inclusa", "mezza pensione", "pensione completa",
+    "camere familiari", "camere per non fumatori", "navetta aeroportuale",
+    "fissa appuntamento", "si accettano animali", "palestra privata",
+    "palestra su appuntamento", "palestra a domicilio", "spiaggia",
+    "ambiente climatizzato", "presente sulla guida", "presente su tripadvisor",
+    "capitali europee", "personal trainer", "preparazione atletica",
+    "mg fitnes", "affascinanti da visitare",
 }
 
 REJECT_PREFIXES = (
@@ -106,7 +118,12 @@ def should_reject(r):
                    "trova tutte ", "trova il ", "scopri ", "prenotazione ",
                    "abbiamo ", "offriamo ", "siamo ", "mettiamo ", "garantiamo ",
                    "l'officina ", "l'hotel ", "il ristorante ", "la palestra ",
-                   "fitness point", "centro benessere")
+                   "fitness point", "centro benessere", "vendita ", "acquisto ",
+                   "manutenzione ", "riparazione ", "installazione ",
+                   "autonoleggio", "taxi ", "transfer ", "escursioni ",
+                   "noleggio ", "assistenza ", "consulenza ", "pulizia ",
+                   "ristorante con", "pizzeria con", "hotel con", "albergo con",
+                   "bb a ", "b&b a ", "ristorante a ", "pizzeria a ")
     for ds in desc_starts:
         if nlower.startswith(ds):
             return "DESC_AS_NAME"
