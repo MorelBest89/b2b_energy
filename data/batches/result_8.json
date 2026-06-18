@@ -1,0 +1,142 @@
+{
+  "709": {
+    "descrizione": "Castiglioni Cartotecnica S.r.l., produzione cartotecnica. Categoria errata.",
+    "note": "Industria cartotecnica. Non target energia residenziale/commerciale.",
+    "punteggio": 2
+  },
+  "710": {
+    "descrizione": "Fitland SSD a Lomazzo, centro fitness con palestra, piscina, area spa, corsi. Più di una palestra: 500+ mq, 50h/settimana corsi.",
+    "note": "Centro fitness completo con piscina e spa = consumi ALTISSIMI. Cliente ideale per audit energetico completo. Caldaia, pompe, illuminazione, climatizzazione.",
+    "punteggio": 9
+  },
+  "711": {
+    "descrizione": "Leonardo Fazzioli, personal trainer a Cantù. Allenamenti online e in palestra. Libero professionista.",
+    "note": "PT singolo. Consumi minimi. Non target.",
+    "punteggio": 1
+  },
+  "712": {
+    "descrizione": "Centro Danza Fitness / Just Dance Lomazzo, scuola di danza classica e moderna da 30+ anni.",
+    "note": "Scuola danza. Consumi illuminazione sala. Valutare interesse.",
+    "punteggio": 4
+  },
+  "714": {
+    "descrizione": "Nextraininglab / ComoNExT, incubatore startup e innovation hub. Non palestra.",
+    "note": "Hub innovazione. Uffici. Non target.",
+    "punteggio": 1
+  },
+  "715": {
+    "descrizione": "Palestra in Action a Paderno Dugnano, palestra di pugilato e sala pesi.",
+    "note": "Palestra pugilato. Consumi medi. Fuori zona? Verificare.",
+    "punteggio": 3
+  },
+  "716": {
+    "descrizione": "Idea Fissa SSD a Muggiò, palestra familiare dal 1993. Pilates, corsi. Ambiente familiare.",
+    "note": "Palestra storica. Consumi medi. Buona reputazione locale.",
+    "punteggio": 5
+  },
+  "717": {
+    "descrizione": "Aero Gravity a Pero (MI), indoor skydiving - galleria del vento verticale. Consumi ENORMI per turbine.",
+    "note": "Galleria del vento = consumi industriali elevatissimi. Cliente ideale per efficienza energetica industriale. Unico in Italia.",
+    "punteggio": 8
+  },
+  "718": {
+    "descrizione": "Desio Back School, centro osteopatia Desio. Non palestra.",
+    "note": "Studio osteopatia. Consumi ridotti. Non target.",
+    "punteggio": 1
+  },
+  "722": {
+    "descrizione": "Alter Ego S.r.l. / Alterego Group, corsi formazione sicurezza e HACCP. Non palestra.",
+    "note": "Centro formazione. Consumi ufficio. Non target.",
+    "punteggio": 1
+  },
+  "724": {
+    "descrizione": "ASA Società Sportiva Dilettantistica a Lomazzo, società basket con settori giovanili, minibasket, eventi.",
+    "note": "Società basket. Palestre in gestione. Consumi illuminazione palazzetto. Potenziale medio.",
+    "punteggio": 5
+  },
+  "730": {
+    "descrizione": "Palestra Popolare di Gallarate, palestra popolare/associazione.",
+    "note": "Associazione piccola.",
+    "punteggio": 3
+  },
+  "738": {
+    "descrizione": "Kronos S.S.D. a Gallarate, società sportiva.",
+    "note": "Associazione media.",
+    "punteggio": 3
+  },
+  "825": {
+    "descrizione": "Tecnostampi Srl a Varese, progettazione e realizzazione stampi in acciaio per automotive. Dal 1967. Clienti: Audi, BMW, Mercedes, Stellantis, Ford.",
+    "note": "Officina meccanica di precisione con 60 anni di storia. Macchinari CNC, foratrici, fresatrici, presse 4500 ton. Consumi INDUSTRIALI elevati. Cliente ideale per audit efficienza industriale.",
+    "punteggio": 8
+  },
+  "828": {
+    "descrizione": "Belloro S.r.l. a Varese, ingrosso materiale elettrico.",
+    "note": "Rivenditore materiale elettrico. Potenziale partnership per ricambi?",
+    "punteggio": 2
+  },
+  "832": {
+    "descrizione": "Ca' Tappo di Valerio Pisani a Varese, enoteca con camere. Attività mista.",
+    "note": "Enoteca/B&B. Consumi medi.",
+    "punteggio": 4
+  },
+  "836": {
+    "descrizione": "Carrozzeria Paolino di Fratelli Valentino e Alessandro, carrozzeria auto.",
+    "note": "Carrozzeria con consumi cabina verniciatura e illuminazione.",
+    "punteggio": 4
+  },
+  "838": {
+    "descrizione": "Cavanna & Bano S.r.l., carpenteria metallica. Produzione container e strutture.",
+    "note": "Carpenteria metallica con consumi industriali (saldatura, taglio).",
+    "punteggio": 5
+  },
+  "840": {
+    "descrizione": "C.F. di Castiglioni Fabio, officina meccanica.",
+    "note": "Officina piccola. Consumi medi.",
+    "punteggio": 4
+  },
+  "841": {
+    "descrizione": "Ciemme Emme S.r.l., lavorazioni meccaniche precisione.",
+    "note": "Officina meccanica. Consumi macchinari CNC.",
+    "punteggio": 5
+  },
+  "850": {
+    "descrizione": "Elettromeccanica F.lli Dell'Acqua, elettromeccanica industriale.",
+    "note": "Officina elettromeccanica. Consumi medi.",
+    "punteggio": 4
+  },
+  "858": {
+    "descrizione": "Galimberti Paolo, tornitura e fresatura precisione.",
+    "note": "Officina piccola. Consumi contenuti.",
+    "punteggio": 3
+  },
+  "860": {
+    "descrizione": "Gierre Gomma S.r.l., produzione articoli in gomma.",
+    "note": "Industria gomma con consumi termici.",
+    "punteggio": 5
+  },
+  "862": {
+    "descrizione": "Isoli S.r.l., produzione isolanti termoacustici.",
+    "note": "Industria isolanti. Consumi produzione.",
+    "punteggio": 4
+  },
+  "864": {
+    "descrizione": "La Ferrarini di Ferrarini Carlo, calzaturificio/tappezzeria auto.",
+    "note": "Tappezzeria. Consumi medi.",
+    "punteggio": 3
+  },
+  "869": {
+    "descrizione": "Laser Company di Balzarini R., taglio laser.",
+    "note": "Taglio laser = consumi elevati. Potenziale medio.",
+    "punteggio": 5
+  },
+  "870": {
+    "descrizione": "M.C. Corò Strutture Metalliche, carpenteria metallica, depurazione, container.",
+    "note": "Carpenteria con consumi saldatura e taglio.",
+    "punteggio": 5
+  },
+  "874": {
+    "descrizione": "Meccanica Monini, officina meccanica. Sito placeholder generico.",
+    "note": "Informazioni limitate. Verificare.",
+    "punteggio": 2
+  }
+}

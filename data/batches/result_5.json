@@ -1,0 +1,202 @@
+{
+  "432": {
+    "descrizione": "Ristorante Pizzeria Giardino a Baveno, locale con giardino sul Lago Maggiore.",
+    "note": "Locale turistico. Consumi stagionali.",
+    "punteggio": 4
+  },
+  "434": {
+    "descrizione": "Cava Drink & Restaurant a Baveno, locale con terrazza sulle Isole Borromee. Drink, cocktail e cucina raffinata.",
+    "note": "Locale turistico di tendenza. Consumi stagionali elevati in estate. Potenziale medio.",
+    "punteggio": 6
+  },
+  "436": {
+    "descrizione": "I.A.T. di Baveno, ufficio turistico. Non ristorante.",
+    "note": "Ente pubblico. Non target.",
+    "punteggio": 1
+  },
+  "437": {
+    "descrizione": "Il Cantuccio a Brovello-Carpugnino, ristorante con pranzo di lavoro a 15€. Cucina genuina, prodotti locali.",
+    "note": "Trattoria con pranzi lavoro = volumi costanti. Buon rapporto qualità/prezzo. Potenziale medio.",
+    "punteggio": 6
+  },
+  "438": {
+    "descrizione": "La Club House - Golf Club Alpino a Stresa, ristorante del golf club con vista campo. Pizzeria e cucina.",
+    "note": "Ristorante in struttura sportiva esclusiva. Consumi legati alla stagione golfistica. Potenziale medio.",
+    "punteggio": 5
+  },
+  "439": {
+    "descrizione": "La Vecchia Fontana a Stresa, ristorante con presenza solo Instagram.",
+    "note": "Informazioni minime. Verificare.",
+    "punteggio": 2
+  },
+  "441": {
+    "descrizione": "Le Isole / Terre Borromeo, ente gestore delle isole Borromeo. Non ristorante singolo ma gestione multipla.",
+    "note": "Gestione parchi e ristoranti. Partner istituzionale, approccio complesso.",
+    "punteggio": 4
+  },
+  "445": {
+    "descrizione": "Per Bacco di Contini Elena a Leggiuno, trattoria storica dal 1926. Cucina tradizionale lombarda, 120 coperti. Terrazza esterna. Parcheggio bus.",
+    "note": "Trattoria storica con volumi importanti (120 posti). Buon potenziale per efficienza. Attrezzata per comitive.",
+    "punteggio": 7
+  },
+  "447": {
+    "descrizione": "Ristorante Pizzeria Pontile 2 a Stresa, presenza solo Instagram.",
+    "note": "Informazioni minime. Verificare.",
+    "punteggio": 2
+  },
+  "451": {
+    "descrizione": "Strattoria Arona, ristorante in centro Arona. Sito in rinnovamento.",
+    "note": "Nuovo sito in arrivo = locale attivo. Verificare direttamente.",
+    "punteggio": 4
+  },
+  "452": {
+    "descrizione": "Condividere Bistrot ad Arona, piccolo ristorante centro storico. Piatti del territorio, ambiente elegante.",
+    "note": "Bistrot piccolo, consumi contenuti.",
+    "punteggio": 4
+  },
+  "455": {
+    "descrizione": "Easypoke a Dormelletto, poke bowl hawaiane. Delivery (Deliveroo, Glovo). Ingredienti freschi, recensioni eccellenti.",
+    "note": "Poke con delivery = consumi refrigerazione. Locale piccolo/medio.",
+    "punteggio": 5
+  },
+  "456": {
+    "descrizione": "La Cascina ad Arona, ristorante cucina trentina. CHIUSO definitivamente dal 17 marzo 2026.",
+    "note": "ATTIVITÀ CHIUSA. Non contattare.",
+    "punteggio": 0
+  },
+  "459": {
+    "descrizione": "Ristorante Pizzeria Via Veneto a Oleggio Castello, ristorante sul Lago Maggiore. Pizza in forno a legna, pasta fatta in casa.",
+    "note": "Ristorante con forno a legna e produzione pasta = consumi. Buon potenziale medio.",
+    "punteggio": 6
+  },
+  "461": {
+    "descrizione": "Ristorante Mottarone, presenza solo Instagram.",
+    "note": "Informazioni minime.",
+    "punteggio": 2
+  },
+  "462": {
+    "descrizione": "Bocciofila a Borgomanero, osteria con bocciofila. Cucina tradizionale piemontese, pasta fresca, aperitivi gourmet. Business lunch.",
+    "note": "Locale con doppia attività (bocciofila + ristorante). Consumi medi. Valutare interesse.",
+    "punteggio": 6
+  },
+  "463": {
+    "descrizione": "Papillon Cocktail & Restaurant a Sesto Calende, locale elegante sul Ticino. Specialità pesce, cocktail artigianali.",
+    "note": "Locale sul fiume, turistico. Consumi stagionali. Potenziale medio.",
+    "punteggio": 5
+  },
+  "464": {
+    "descrizione": "L'Olimpia Trattoria a Veruno, ristorante elegante specializzato pesce dal 1993. Guida Michelin. Camere per ospiti. Location golf.",
+    "note": "Ristorante di pregio con camere. Cliente premium. Consumi elevati per cucina eospitalità.",
+    "punteggio": 7
+  },
+  "466": {
+    "descrizione": "Jimmy's Keiler ad Arona, birreria/pub con cucina tedesca. Wurstel, stinco maiale, hamburger. Apertura 7:00-1:00. Dehor vista lago.",
+    "note": "Pub con orari molto estesi (18h/giorno) = consumi elevati illuminazione e refrigerazione. Buon potenziale.",
+    "punteggio": 7
+  },
+  "470": {
+    "descrizione": "Enoteca Simonotti Wine Bar / B&B Fossati ad Arona, enoteca con camere. Selezione vini, cucina, vista sul lago.",
+    "note": "Enoteca + B&B. Consumi medi. Valutare interesse per efficienza.",
+    "punteggio": 5
+  },
+  "472": {
+    "descrizione": "Hostaria al Vecchio Portico ad Arona, dominio in vendita. Attività probabilmente chiusa.",
+    "note": "Dominio in vendita. Probabile cessata attività.",
+    "punteggio": 0
+  },
+  "476": {
+    "descrizione": "Pastificio Gastronomia Rossi Aliverti ad Arona, pasta fresca e ravioli dal 1985, gastronomia. Solo Facebook.",
+    "note": "Produzione pasta fresca = consumi refrigerazione e macchinari. Potenziale medio.",
+    "punteggio": 5
+  },
+  "477": {
+    "descrizione": "Piadineria Rotolo, sito riferito a Roma. Contatto fuori zona.",
+    "note": "Sito non pertinente alla zona. Errore contatto.",
+    "punteggio": 1
+  },
+  "478": {
+    "descrizione": "Senza Pensieri / Raf Management, società di gestione food & beverage con più brand. Non ristorante singolo.",
+    "note": "Gruppo di gestione F&B. Potenziale partnership B2B multi-brand.",
+    "punteggio": 4
+  },
+  "481": {
+    "descrizione": "Ristorante La Divina Pizzeria a Dormelletto, ristorante e pizzeria gourmet. Impasto ai cereali, senza glutine. Sala privata per eventi. Sistema purificazione aria.",
+    "note": "Ristorante di qualità con attenzione al benessere. Potrebbero essere ricettivi a efficienza. Buon potenziale.",
+    "punteggio": 7
+  },
+  "484": {
+    "descrizione": "Papillon Società Semplificata / Papillon Caramelle ad Arona, produzione e vendita caramelle, cioccolato, marshmallow. Non ristorante.",
+    "note": "Dolciario/industria alimentare. Consumi produzione. Target diverso, valutare approccio B2B.",
+    "punteggio": 3
+  },
+  "487": {
+    "descrizione": "Osteria del Vergante ad Arona, osteria tradizionale. Solo Facebook.",
+    "note": "Locale medio. Verificare.",
+    "punteggio": 3
+  },
+  "489": {
+    "descrizione": "Wok To Walk Arona, wok fast food asiatico. Catena internazionale.",
+    "note": "Catena internazionale. Decisioni centralizzate. Difficile approccio diretto.",
+    "punteggio": 3
+  },
+  "492": {
+    "descrizione": "La Latteria di Arona, latteria/bar.",
+    "note": "Locale piccolo.",
+    "punteggio": 3
+  },
+  "494": {
+    "descrizione": "Ristorante Pizzeria La Piazzetta a Dormelletto, locale di paese.",
+    "note": "Locale medio.",
+    "punteggio": 4
+  },
+  "495": {
+    "descrizione": "Ristorante La Pashmina di Arona, ristorante. Presenza web minima.",
+    "note": "Verificare attività.",
+    "punteggio": 3
+  },
+  "497": {
+    "descrizione": "Ristorante Pizzeria Le Volpi a Dormelletto, locale di paese.",
+    "note": "Locale medio.",
+    "punteggio": 4
+  },
+  "498": {
+    "descrizione": "Ristorante Roma di Arona, ristorante.",
+    "note": "Locale medio.",
+    "punteggio": 4
+  },
+  "499": {
+    "descrizione": "Pizzeria Ristorante Dei Tigli a Oleggio Castello, pizzeria ristorante.",
+    "note": "Locale medio.",
+    "punteggio": 4
+  },
+  "501": {
+    "descrizione": "Rosticceria Da Gianni ad Arona, rosticceria/asporto.",
+    "note": "Rosticceria con consumi forno continui. Potenziale medio.",
+    "punteggio": 5
+  },
+  "502": {
+    "descrizione": "Acqua e Farina a Dormelletto, pizzeria.",
+    "note": "Pizzeria media.",
+    "punteggio": 4
+  },
+  "503": {
+    "descrizione": "Antica Trattoria del Pesce di Arona, trattoria di pesce storica.",
+    "note": "Trattoria pesce con refrigerazione. Potenziale medio.",
+    "punteggio": 5
+  },
+  "504": {
+    "descrizione": "New Tam Tam di Arona, kebab/fast food.",
+    "note": "Fast food con consumi continui.",
+    "punteggio": 5
+  },
+  "506": {
+    "descrizione": "Ristorante Cinese La Grande Muraglia ad Arona, cucina cinese.",
+    "note": "Ristorante cinese con consumi wok.",
+    "punteggio": 5
+  },
+  "509": {
+    "descrizione": "Ristorante Pizzeria L'Angolo della Pizza a Dormelletto, pizzeria.",
+    "note": "Locale medio.",
+    "punteggio": 4
+  }
+}
