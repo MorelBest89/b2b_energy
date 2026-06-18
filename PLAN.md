@@ -46,10 +46,27 @@
 | Officine/Artigiani | 53 | 53 |
 | Lavanderie Industriali | 31 | 31 |
 
-### 0.5 Citta coperte
+### 0.5 Tracking Table — RACCOLTA CONTATTI
 
-Varese, Como, Gallarate, Busto Arsizio, Verbania.
-Da aggiungere: Saronno, Cantu, Luino, Tradate, Erba, Mariano Comense, Olgiate Comasco, Laveno, Stresa, Baveno.
+| Legenda | |
+|---|---|
+| ✅ **Fatto** | Scraping completato, dati in CSV |
+| 🔄 **In corso** | Avviato ma incompleto |
+| ⬜ **Da fare** | Non ancora iniziato |
+| **-** | Restituito 0 in quel run (da ritentare) |
+| **Nr** | Contatti raccolti |
+
+| Canale | Cat. | Varese | Gallarate | Busto A. | Saronno | Tradate | Malnate | Luino | Gavirate | Somma L. | Cassano M. | Como | Cantu | Erba | Mariano C. | Olgiate C. | Lomazzo | Fino M. | Verbania | Stresa | Arona |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **PagineGialle** | Rist. | ✅172 | - | ✅167 | - | - | - | - | - | ✅167 | ✅146 | - | ✅169 | - | ✅159 | ✅159 | - | - | - | ✅170 | ✅171 | **1.313** |
+| | Palestre | ✅149 | ✅105 | - | - | - | - | ✅28 | - | ✅47 | ✅31 | - | - | ✅123 | - | - | ✅71 | - | - | ✅17 | - | **571** |
+| | Officine | ✅150 | - | - | - | - | ✅43 | - | - | ✅114 | - | ✅126 | - | ✅114 | ✅106 | - | ✅102 | - | - | - | ✅83 | **838** |
+| | Lavand. | ✅13 | - | - | ✅64 | - | - | ✅5 | - | - | - | - | - | ✅15 | ✅13 | ✅9 | - | ✅5 | - | ✅2 | - | **126** |
+| | Hotel | ✅2 | ✅1 | - | - | - | - | - | ✅2 | - | - | ✅1 | - | - | - | ✅1 | - | - | - | - | - | **7** |
+| **OpenStreetMap** | Tutte | 309 totali (25% telefono, archiviati separatamente) |
+| **Google Maps** | Tutte | ⬜ |
+| **Liste B2B** | Tutte | ⬜ |
+| **TheFork** | Rist. | ⬜ |
 
 ### 0.6 Esecuzione
 
