@@ -16,4 +16,8 @@ Thumbs.db
 # Temp
 *.tmp
 ~$*
+
+# Data artifacts
+data/batches/
+data/site_texts.json
 data/site_texts.json
