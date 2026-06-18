@@ -3,16 +3,16 @@ import csv, re, os
 from collections import Counter
 
 BASE = r"C:\Users\marco\Projects\consulenza_energy"
-PATH = os.path.join(BASE, "contatti_b2b.csv")
+PATH = os.path.join(BASE, "data/contatti_b2b.csv")
 
 # Load from original per-category sources (not already-screened CSV)
 rows = []
 srcs = {
-    "contatti_ristoranti.csv": "Ristoranti/Pizzerie",
-    "contatti_palestre.csv": "Palestre",
-    "contatti_officine.csv": "Officine/Artigiani",
-    "contatti_lavanderie.csv": "Lavanderie",
-    "contatti_hotel.csv": "Hotel/B&B",
+    "data/contatti_ristoranti.csv": "Ristoranti/Pizzerie",
+    "data/contatti_palestre.csv": "Palestre",
+    "data/contatti_officine.csv": "Officine/Artigiani",
+    "data/contatti_lavanderie.csv": "Lavanderie",
+    "data/contatti_hotel.csv": "Hotel/B&B",
 }
 for fn, cat in srcs.items():
     path = os.path.join(BASE, fn)
@@ -101,8 +101,31 @@ def should_reject(r):
     if name.isupper() and len(name) > 40:
         return "ALL_CAPS_DESC"
     
-    # 9. Name ends with " (VA)" or " (CO)" = business name already has city tag baked in
-    #    This is fine for now, skip
+    # 9. Name starts with a description pattern (Presente su, Da asporto, Un assistente, Trova tutte)
+    desc_starts = ("presente su ", "presente in ", "da asporto", "un assistente",
+                   "trova tutte ", "trova il ", "scopri ", "prenotazione ",
+                   "abbiamo ", "offriamo ", "siamo ", "mettiamo ", "garantiamo ",
+                   "l'officina ", "l'hotel ", "il ristorante ", "la palestra ",
+                   "fitness point", "centro benessere")
+    for ds in desc_starts:
+        if nlower.startswith(ds):
+            return "DESC_AS_NAME"
+    
+    # 10. Name is very long and has no phone (likely a description scraped from body text)
+    if len(name) > 70 and not r["telefono"].strip():
+        return "LONG_NO_PHONE"
+    
+    # 11. Name contains a colon (likely a description like "Fitness Point: La tua palestra")
+    if ":" in name and len(name) > 25 and not r["telefono"].strip():
+        return "DESC_WITH_COLON"
+    
+    # 12. Name has double quotes (never in real Italian business names, likely scraped text)
+    if '"' in name and len(name) > 30:
+        return "QUOTED_TEXT"
+    
+    # 13. Name is "via X, CAP Citta" pattern repeated (garbage from body text concatenation)
+    if re.search(r'via\s.+\d{5}\s+\w+.*via\s.+\d{5}', nlower):
+        return "DOUBLE_ADDR"
     
     return None
 

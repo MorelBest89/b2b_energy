@@ -12,7 +12,7 @@ from playwright.sync_api import sync_playwright
 sys.stdout.reconfigure(encoding='utf-8')
 
 BASE = r"C:\Users\marco\Projects\consulenza_energy"
-OUTPUT = os.path.join(BASE, "contatti_b2b.csv")
+OUTPUT = os.path.join(BASE, "data/contatti_b2b.csv")
 
 # ── CITIES ─────────────────────────────────────────────────────
 # Varese province + Como + Lago Maggiore

@@ -1,7 +1,7 @@
 # PLAN.md — Execution Roadmap M&M Energy
 
 > **Obiettivo:** Portare Morel da 0 a 3+ check B2B paganti in 90 giorni.
-> **Documento master:** [business-check-energetico-completo.md](business-check-energetico-completo.md)
+> **Documento master:** [business-check-energetico-completo.md](docs/business-check-energetico-completo.md)
 
 ---
 
@@ -78,7 +78,7 @@ python scrape_contatti.py
 
 ## FASE 1 — Setup Tecnico (Giorni 1-5)
 
-**Documento:** [roadmap-30-giorni.md](roadmap-30-giorni.md)
+**Documento:** [roadmap-30-giorni.md](docs/roadmap-30-giorni.md)
 
 ### 1.1 Acquisti (Giorno 1) — Budget €350-500
 
@@ -90,22 +90,22 @@ python scrape_contatti.py
 
 ### 1.2 Brand (Giorno 2)
 
-- [ ] **Logo:** Vedere [concept da Gemini](gemini-concept-logo.md) se non ancora creato
+- [ ] **Logo:** Vedere concept da Gemini (logo brief archiviato) se non ancora creato
 - [ ] **Google Business Profile:** nome "Morel — Consulenza Energetica Varese", categorie Ingegnere + Consulente Energetico
-- [ ] **Brochure one-pager:** Usare [brochure-morel.md](brochure-morel.md) come base per PDF professionale
+- [ ] **Brochure one-pager:** Usare [brochure-morel.md](docs/brochure-morel.md) come base per PDF professionale
 
 ### 1.3 Template operativi (Giorno 3-5)
 
 - [ ] **Template Report (Word/PDF):** struttura standard con foto termiche, priorita, costi, risparmi, bonus
-- [ ] **Checklist Sopralluogo:** da [check-sopralluogo.md](check-sopralluogo.md)
-- [ ] **Contratto B2B:** con clausola "3x Risparmio o Rimborsato" (da [brochure-morel.md](brochure-morel.md))
-- [ ] **Script telefonico:** da [script-vendita.md](script-vendita.md)
+- [ ] **Checklist Sopralluogo:** da [check-sopralluogo.md](docs/check-sopralluogo.md)
+- [ ] **Contratto B2B:** con clausola "3x Risparmio o Rimborsato" (da [brochure-morel.md](docs/brochure-morel.md))
+- [ ] **Script telefonico:** da [script-vendita.md](docs/script-vendita.md)
 
 ---
 
 ## FASE 2 — Attivazione Rete (Giorni 6-15)
 
-**Documenti:** [piano-3-contatti.md](piano-3-contatti.md), [sinergie-flipping.md](sinergie-flipping.md)
+**Documenti:** [piano-3-contatti.md](docs/piano-3-contatti.md), [sinergie-flipping.md](docs/sinergie-flipping.md)
 
 ### 2.1 I 3 Contatti Caldi
 
@@ -122,13 +122,13 @@ python scrape_contatti.py
 
 - [ ] **Ogni giorno:** chiamare 5-10 contatti dal CRM (Fase 0)
 - [ ] **Ogni giorno:** visitare di persona 2-3 attivita in orario di calma
-- [ ] **Script B2B (da [script-vendita.md](script-vendita.md)):** presentazione in 2 minuti, focus su ROI, chiedere la bolletta
+- [ ] **Script B2B (da [script-vendita.md](docs/script-vendita.md)):** presentazione in 2 minuti, focus su ROI, chiedere la bolletta
 
 ---
 
 ## FASE 3 — Primi Check e Validazione (Giorni 16-30)
 
-**Documenti:** [check-sopralluogo.md](check-sopralluogo.md), [dal-check-alla-soluzione.md](dal-check-alla-soluzione.md), [gemini-come-leggere-bollette.md](gemini-come-leggere-bollette.md)
+**Documenti:** [check-sopralluogo.md](docs/check-sopralluogo.md), [dal-check-alla-soluzione.md](docs/dal-check-alla-soluzione.md), [gemini-come-leggere-bollette.md](docs/gemini-come-leggere-bollette.md)
 
 ### 3.1 Obiettivo: 3+ check paganti
 
@@ -138,8 +138,8 @@ python scrape_contatti.py
 
 ### 3.2 Per ogni check
 
-- [ ] Sopralluogo con le 7 fasi (checklist da [check-sopralluogo.md](check-sopralluogo.md))
-- [ ] Analisi bollette (guida da [gemini-come-leggere-bollette.md](gemini-come-leggere-bollette.md))
+- [ ] Sopralluogo con le 7 fasi (checklist da [check-sopralluogo.md](docs/check-sopralluogo.md))
+- [ ] Analisi bollette (guida da [gemini-come-leggere-bollette.md](docs/gemini-come-leggere-bollette.md))
 - [ ] Report consegnato entro 48h
 - [ ] Presentazione upsell: bonus ENEA (+€300), coordinamento lavori (+€1.500, 10% sui lavori)
 
@@ -153,7 +153,7 @@ python scrape_contatti.py
 
 ## FASE 4 — Consolidamento (Mesi 2-3)
 
-**Documento:** [business-check-energetico-completo.md](business-check-energetico-completo.md) §13
+**Documento:** [business-check-energetico-completo.md](docs/business-check-energetico-completo.md) §13
 
 ### 4.1 Standardizzazione
 
