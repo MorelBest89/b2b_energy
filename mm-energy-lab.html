@@ -114,11 +114,13 @@
     .step h3 { font-size: 1.1rem; margin-bottom: 8px; }
     .step p { font-size: .9rem; color: #555; max-width: 300px; margin: 0 auto; }
 
-    .sectors { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 40px; }
+    .sectors { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
     .sector-card {
-      background: #fff; border-radius: 10px; padding: 20px;
+      background: #fff; border-radius: 10px; padding: 28px 20px;
       border: 1px solid #eee; text-align: center;
       transition: all .2s; cursor: default;
+      display:flex;flex-direction:column;align-items:center;justify-content:center;
+      min-height:140px;
     }
     .sector-card:hover { border-color: #059669; box-shadow: 0 4px 16px rgba(5,150,105,.1); }
     .sector-card .icon { font-size: 1.8rem; margin-bottom: 8px; }
