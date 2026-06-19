@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M&amp;M Energy Lab — Consulenza Energetica per la tua Attivit&amp;agrave;</title>
+  <meta name="description" content="Analisi gratuita delle bollette per ristoranti, palestre, officine, hotel e lavanderie. Risparmia senza cambiare fornitore.">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+      color: #1a1a2e;
+      line-height: 1.6;
+      background: #fafafa;
+    }
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #eee;
+    }
+    nav .container {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .logo { font-weight: 700; font-size: 1.25rem; letter-spacing: -.02em; }
+    .logo span { color: #059669; }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { text-decoration: none; color: #444; font-size: .9rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: #059669; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 10px 24px; border-radius: 8px;
+      font-weight: 600; font-size: .9rem; text-decoration: none;
+      transition: all .2s; cursor: pointer; border: none;
+    }
+    .btn-primary { background: #059669; color: #fff; }
+    .btn-primary:hover { background: #047857; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(5,150,105,.3); }
+    .btn-outline { background: transparent; color: #059669; border: 1.5px solid #059669; }
+    .btn-outline:hover { background: #059669; color: #fff; }
+    .btn-large { padding: 14px 32px; font-size: 1rem; }
+
+    .hero {
+      padding: 80px 0 64px;
+      background: linear-gradient(135deg, #ecfdf5 0%, #fff 50%, #ecfdf5 100%);
+    }
+    .hero .container {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+      align-items: center;
+    }
+    .hero-badge {
+      display: inline-block; padding: 6px 14px; border-radius: 20px;
+      background: #d1fae5; color: #047857; font-size: .8rem; font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .hero h1 { font-size: 2.6rem; font-weight: 800; line-height: 1.2; letter-spacing: -.03em; margin-bottom: 16px; }
+    .hero h1 span { color: #059669; }
+    .hero p { font-size: 1.1rem; color: #555; margin-bottom: 28px; max-width: 480px; }
+    .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-stats {
+      display: flex; gap: 32px; margin-top: 16px;
+      font-size: .85rem; color: #666;
+    }
+    .hero-stats strong { font-size: 1.1rem; color: #1a1a2e; display: block; }
+    .hero-visual {
+      background: #fff; border-radius: 16px; padding: 32px;
+      box-shadow: 0 8px 32px rgba(0,0,0,.08);
+      text-align: center;
+    }
+    .hero-visual .placeholder-icon { font-size: 3.5rem; margin-bottom: 12px; }
+    .hero-visual h3 { font-size: 1.2rem; margin-bottom: 8px; }
+    .hero-visual .sample-bill {
+      background: #f8fafc; border-radius: 10px; padding: 20px;
+      font-size: .8rem; text-align: left; font-family: 'Courier New', monospace;
+      border: 1px solid #e2e8f0;
+    }
+    .sample-bill .penalty {
+      background: #fef2f2; color: #dc2626; padding: 2px 8px; border-radius: 4px;
+      font-weight: 700; margin-top: 6px;
+    }
+    .highlight { background: #fef9c3; padding: 0 4px; }
+
+    .section { padding: 72px 0; }
+    .section-dark { background: #1a1a2e; color: #fff; }
+    .section-label {
+      display: inline-block; padding: 4px 12px; border-radius: 16px;
+      background: #d1fae5; color: #047857; font-size: .8rem; font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .section-title { font-size: 2rem; font-weight: 700; margin-bottom: 12px; letter-spacing: -.02em; }
+    .section-sub { font-size: 1rem; color: #666; max-width: 600px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+    .card {
+      background: #fff; border-radius: 12px; padding: 28px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.06); border: 1px solid #f0f0f0;
+      transition: transform .2s;
+    }
+    .card:hover { transform: translateY(-2px); }
+    .card-icon { font-size: 2rem; margin-bottom: 12px; }
+    .card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+    .card p { font-size: .9rem; color: #555; }
+
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 40px; }
+    .step { text-align: center; }
+    .step-num {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: #059669; color: #fff; font-weight: 700; font-size: 1.2rem;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .step h3 { font-size: 1.1rem; margin-bottom: 8px; }
+    .step p { font-size: .9rem; color: #555; max-width: 300px; margin: 0 auto; }
+
+    .sectors { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 40px; }
+    .sector-card {
+      background: #fff; border-radius: 10px; padding: 20px;
+      border: 1px solid #eee; text-align: center;
+      transition: all .2s; cursor: default;
+    }
+    .sector-card:hover { border-color: #059669; box-shadow: 0 4px 16px rgba(5,150,105,.1); }
+    .sector-card .icon { font-size: 1.8rem; margin-bottom: 8px; }
+    .sector-card h4 { font-size: .95rem; }
+    .sector-card p { font-size: .8rem; color: #777; margin-top: 4px; }
+
+    .testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+    .testimonial {
+      background: #fff; border-radius: 12px; padding: 24px;
+      border: 1px solid #eee;
+    }
+    .testimonial .stars { color: #fbbf24; margin-bottom: 8px; }
+    .testimonial blockquote { font-size: .9rem; color: #444; font-style: italic; margin-bottom: 12px; }
+    .testimonial cite { font-size: .8rem; color: #888; font-style: normal; }
+
+    .faq-list { margin-top: 32px; max-width: 700px; margin-left: auto; margin-right: auto; }
+    .faq-item { border-bottom: 1px solid #e2e8f0; padding: 20px 0; }
+    .faq-item summary { font-weight: 600; cursor: pointer; font-size: 1rem; }
+    .faq-item p { font-size: .9rem; color: #555; margin-top: 8px; }
+
+    .cta-section {
+      text-align: center; padding: 80px 24px;
+      background: linear-gradient(135deg, #064e3b, #059669);
+      color: #fff; border-radius: 16px; margin: 72px 0;
+    }
+    .cta-section h2 { font-size: 2rem; font-weight: 700; margin-bottom: 12px; }
+    .cta-section p { font-size: 1rem; opacity: .85; margin-bottom: 28px; max-width: 500px; margin-left: auto; margin-right: auto; }
+    .cta-section .btn-primary { background: #fff; color: #059669; }
+    .cta-section .btn-primary:hover { background: #f0fdf4; }
+    .cta-section small { font-size: .8rem; opacity: .7; display: block; margin-top: 12px; }
+
+    footer { border-top: 1px solid #eee; padding: 32px 0; text-align: center; font-size: .85rem; color: #888; }
+
+    @media (max-width: 768px) {
+      .hero .container { grid-template-columns: 1fr; text-align: center; }
+      .hero h1 { font-size: 1.8rem; }
+      .hero p { margin-left: auto; margin-right: auto; }
+      .hero-cta { justify-content: center; }
+      .hero-stats { justify-content: center; flex-wrap: wrap; }
+      .grid-3, .steps, .testimonial-grid { grid-template-columns: 1fr; }
+      .sectors { grid-template-columns: repeat(2, 1fr); }
+      .nav-links { display: none; }
+      .section-title { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <div class="logo">M&amp;M ENERGY <span>LAB</span></div>
+      <ul class="nav-links">
+        <li><a href="#come-funziona">Come funziona</a></li>
+        <li><a href="#settori">Settori</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contatti" class="btn btn-primary">Richiedi analisi</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <div>
+        <div class="hero-badge">Analisi gratuita — nessun impegno</div>
+        <h1>La tua attività paga <span>troppo</span> per l'energia?<br>Ti mostro dove e come risparmiare.</h1>
+        <p>Non vendo contratti luce o gas. Sono un consulente tecnico: analizzo le tue bollette e trovo sprechi nascosti. Il mio guadagno? Una percentuale di quello che ti faccio risparmiare.</p>
+        <div class="hero-cta">
+          <a href="#contatti" class="btn btn-primary btn-large">Richiedi analisi gratuita</a>
+          <a href="#come-funziona" class="btn btn-outline btn-large">Come funziona</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>8/10</strong> attività hanno penali nascoste</div>
+          <div><strong>€150-500</strong> risparmio medio annuo</div>
+          <div><strong>Zero</strong> costi iniziali</div>
+        </div>
+      </div>
+      <div>
+        <img src="logo.jpg" alt="M&amp;M Energy Lab" style="max-width:25%;height:auto;display:block;margin:0 auto 24px;">
+        <div class="hero-visual">
+          <div class="placeholder-icon">⚡</div>
+          <h3>Esempio di bolletta</h3>
+          <p style="font-size:.85rem;color:#888;margin-bottom:12px;">La "seconda pagina" dove si nascondono gli sprechi</p>
+          <div class="sample-bill">
+            Dati di prelievo &nbsp;&nbsp; Potenza impegnata: 30 kW<br>
+            Energia attiva: 12.450 kWh &nbsp; F1: 4.200 &nbsp; F2: 8.250<br>
+            <span class="highlight">Energia reattiva: 2.880 kVARh</span><br>
+            <div class="penalty">Penale energia reattiva: € 187,50</div>
+          </div>
+          <p style="font-size:.8rem;color:#888;margin-top:12px;">€ 187,50 che puoi recuperare con un intervento tecnico</p>
+        </div>
+      </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div style="text-align:center;">
+        <div class="section-label">Il problema</div>
+        <h2 class="section-title">La tua bolletta nasconde dei costi che non dovresti pagare</h2>
+        <p class="section-sub" style="margin:0 auto;">Il tuo fornitore non ti avvertirà. Le penali tecniche non dipendono dal contratto che hai scelto.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon">⚡</div>
+          <h3>Energia Reattiva</h3>
+          <p>Motori elettrici di frigo, condizionatori, macchinari "sporcano" la corrente. Il distributore ti applica una penale mensile. Si risolve con un rifasatore.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📊</div>
+          <h3>Potenza Impegnata Sbagliata</h3>
+          <p>Il tuo contratto è tarato su un picco che non esiste più. Stai pagando kW che non usi mai. Si risolve con una semplice richiesta al distributore.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔦</div>
+          <h3>Illuminazione Inefficiente</h3>
+          <p>Neon e alogene consumano 4-5 volte più del LED. Con un relamping ti ripaghi l'investimento in 1-2 anni e risparmi per i successivi 15.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="come-funziona" class="section" style="background:#f8fafc;">
+    <div class="container" style="text-align:center;">
+      <div class="section-label">Come funziona</div>
+      <h2 class="section-title">Tre passi verso il risparmio</h2>
+      <p class="section-sub" style="margin:0 auto;">Nessun costo iniziale. Paghi solo se risparmi.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Mandami le bollette</h3>
+          <p>Le ultime 3 bollette luce. Basta una foto via WhatsApp o email. Ci vogliono 2 minuti.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Analisi tecnica gratuita</h3>
+          <p>Leggo ogni voce delle bollette. Identifico penali, potenza sbagliata, fasce orarie non ottimali e sprechi.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Risultato + soluzione</h3>
+          <p>Ti dico esattamente cosa c'è e come risolvere. Se non c'è nulla, arrivederci e grazie. Se c'è, procediamo insieme.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="settori" class="section">
+    <div class="container" style="text-align:center;">
+      <div class="section-label">Chi seguo</div>
+      <h2 class="section-title">I settori che conosco meglio</h2>
+      <p class="section-sub" style="margin:0 auto;">Ogni attività ha consumi diversi. Ho studiato e ottimizzato ciascuno di questi settori.</p>
+      <div class="sectors">
+        <div class="sector-card">
+          <div class="icon">🍕</div>
+          <h4>Ristoranti & Pizzerie</h4>
+          <p>Frigoriferi, forni, celle frigorifere. Penali reattive quasi sempre presenti.</p>
+        </div>
+        <div class="sector-card">
+          <div class="icon">💪</div>
+          <h4>Palestre & Centri Sportivi</h4>
+          <p>Climatizzazione, docce, macchinari. Potenza impegnata spesso sbagliata.</p>
+        </div>
+        <div class="sector-card">
+          <div class="icon">🔧</div>
+          <h4>Officine & Artigiani</h4>
+          <p>Torni, presse, compressori. Energia reattiva da motori industriali.</p>
+        </div>
+        <div class="sector-card">
+          <div class="icon">🧺</div>
+          <h4>Lavanderie Industriali</h4>
+          <p>Grandi volumi di consumo. Ogni piccolo errore costa migliaia di euro.</p>
+        </div>
+        <div class="sector-card">
+          <div class="icon">🏨</div>
+          <h4>Hotel & B&B</h4>
+          <p>Contratti fermi da anni. Stagionalità non gestita. Potenza e fasce da rivedere.</p>
+        </div>
+        <div class="sector-card">
+          <div class="icon">🏪</div>
+          <h4>Negozi & Uffici</h4>
+          <p>Illuminazione e climatizzazione. Interventi rapidi a payback immediato.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:#f8fafc;">
+    <div class="container" style="text-align:center;">
+      <div class="section-label">Cosa dicono di me</div>
+      <h2 class="section-title">I risultati parlano da soli</h2>
+      <p class="section-sub" style="margin:0 auto;">Le prime attività che ho seguito hanno già visto il risparmio in bolletta.</p>
+      <div class="testimonial-grid">
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Marco ha trovato una penale energia reattiva che pagavo da due anni senza saperlo. Risolto con un intervento che si è ripagato in 8 mesi."</blockquote>
+          <cite>— Claudio, Ristorante La Piazzetta, Varese</cite>
+        </div>
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Credevo di avere già il miglior contratto possibile. Invece la potenza impegnata era sbagliata. Risparmio €250 all'anno senza fare nulla."</blockquote>
+          <cite>— Elena, FitZone Palestra, Como</cite>
+        </div>
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Professionalità e competenza. In 10 minuti di analisi ha visto cosa nessuno aveva mai notato in 5 anni di bollette."</blockquote>
+          <cite>— Stefano, Autofficina Buzzi, Busto Arsizio</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section">
+    <div class="container" style="text-align:center;">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">Domande frequenti</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <details>
+            <summary>Devo cambiare fornitore luce o gas?</summary>
+            <p>No. Io non vendo contratti e non cambio fornitori. Lavoro sulla tua bolletta attuale. Se c'è uno spreco, lo risolviamo sull'impianto o sul contratto che hai già.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>Quanto costa l'analisi?</summary>
+            <p>Zero. L'analisi delle bollette è gratuita. Se trovo un margine di risparmio e vuoi procedere con un intervento, ci accordiamo su una percentuale del risparmio ottenuto. Se non trovo nulla, hai perso 5 minuti.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>Quanto tempo ci vuole?</summary>
+            <p>Ricevo le bollette, le analizzo in serata e il giorno dopo hai il risultato. Se c'è un intervento da fare, si risolve in 1-2 settimane (installazione inclusa).</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>Come mi arrivano i risparmi?</summary>
+            <p>Direttamente in bolletta. Se installo un rifasatore, la penale scompare dal mese successivo. Se riduco la potenza impegnata, la quota fissa si abbassa dalla prossima fattura.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <details>
+            <summary>Come funziona il pagamento?</summary>
+            <p>Non anticipi nulla. Dopo l'intervento, verifichiamo insieme che il risparmio sia effettivo. La mia parcella è una percentuale concordata del risparmio ottenuto, solo dopo che hai visto i risultati in bolletta.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <section id="contatti" class="cta-section">
+      <h2>Pronto a scoprire se stai buttando soldi?</h2>
+      <p>Mandami le ultime 3 bollette via WhatsApp. Le analizzo gratis e ti dico il risultato entro 24 ore. Nessun impegno, nessun costo.</p>
+      <a href="https://wa.me/393409718937" class="btn btn-large btn-primary">Scrivimi su WhatsApp</a>
+      <small>Oppure chiamami al +39 340 971 8937</small>
+    </section>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>M&amp;M Energy Lab — Consulenza Energetica per Attività Commerciali</p>
+      <p style="margin-top:4px;">Zona: Varese, Como e provincia</p>
+    </div>
+  </footer>
+
+</body>
+</html>
