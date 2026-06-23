@@ -1,72 +1,39 @@
-# Email da inviare quando non ti passano il titolare
-
-> Situazione: "Il titolare non è mai presente / non posso darle il suo numero"
-> Obiettivo: farsi richiamare e ottenere le bollette
+# Email da inviare ai titolari
 
 ---
 
-## Versione 1 — Diretta (per chi ti ha risposto al telefono)
+## Versione Ufficiale — Ing. Marco Morello
 
-**Oggetto:** Controllo gratuito bolletta energia — Ristorante [NOME]
+**Oggetto:** Pre-analisi tecnica gratuita — [NOME AZIENDA]
 
-Buongioro,
+Gentile [Nome del Titolare o "Titolare di Nome Azienda"],
 
-sono Marco Morello, tecnico analisi consumi. Ho appena parlato con [NOME COLLEGA] al telefono.
+Le scrivo a seguito del mio contatto telefonico odierno con la sua struttura. Mi presento: sono l'Ing. Marco Morello e mi occupo di ingegneria del risparmio per le aziende di Varese, Milano, Como e provincie.
 
-Faccio una cosa molto semplice: controllo **una sola voce** della bolletta dell'energia — l'energia reattiva — che in 8 ristoranti su 10 fa perdere 100-250€ all'anno senza che il titolare lo sappia.
+Le scrivo perché so che la sua attività, come molte altre nel settore, è quotidianamente bersagliata da proposte commerciali per il cambio del fornitore di luce e gas.
 
-Non cambio fornitori, non vendo contratti, non costa nulla.
+Voglio chiarire subito un punto fondamentale: io non vendo contratti di energia, purtroppo sono sempre confuso con quella categoria.
 
-Se il titolare mi manda una foto delle ultime 3 bollette su WhatsApp al **+39 340 971 8937**, in 24 ore ha il risultato. Se c'è qualcosa da recuperare, glielo spiego. Se non c'è, pace.
+In qualità di Ingegnere, il mio lavoro è di natura tecnica. Mi occupo di scovare le falle nei costi fissi che i fornitori solitamente non comunicano ai clienti. Spesso le aziende pagano migliaia di euro all'anno per:
 
-Grazie e buona giornata.
+1. **Penali per Energia Reattiva**: multe tecniche dovute ai macchinari, nascoste nella seconda pagina della bolletta.
+2. **Eccesso di Potenza Impegnata**: quote fisse pagate per energia che non viene mai effettivamente utilizzata.
+3. **Errori di Fatturazione**: voci tecniche errate basate su parametri di distribuzione obsoleti.
 
-Marco Morello — M&M Energy Lab
-+39 340 971 8937
+**La mia proposta per Lei:**
 
----
+Per dimostrarle il valore della mia consulenza, effettuo una pre-analisi tecnica gratuita della sua situazione attuale.
 
-## Versione 2 — Per l'impiegato che deve inoltrare (più breve)
+Se desidera verificare se la sua azienda sta regalando soldi al distributore, può rispondermi a questa mail allegando copia completa (tutte le pagine) dell'ultima bolletta (o meglio delle ultime tre, per avere un dato storico).
 
-**Oggetto:** Da inoltrare al titolare — controllo gratis bolletta
+Entro 48 ore le invierò un breve report tecnico indicandole se:
+- Esistono margini di risparmio immediato (senza investimenti).
+- La sua attuale configurazione tecnica è ottimale (in questo caso glielo confermerò e amici come prima).
 
-Ciao,
+In attesa di un suo riscontro, le auguro un buon lavoro.
 
-come detto al telefono, controllo se nella bolletta dell'energia c'è una voce chiamata energia reattiva che in 8 ristoranti su 10 fa perdere soldi ogni mese.
+Cordialmente,
 
-Non vendo nulla, non cambio contratti.
-
-Basta che il titolare mi mandi una foto delle ultime 3 bollette su WhatsApp al **340 971 8937** e in 24 ore gli dico com'è.
-
-Se puoi inoltrargli questo messaggio, grazie!
-
-Marco Morello
-
----
-
-## Versione 3 — Per lasciare alla reception (stampata o scritta)
-
-> Stampala o scrivila su un biglietto
-
-**M&M Energy Lab — Marco Morello**
-
-Controllo gratuito della bolletta energia per verificare se ci sono penali nascoste (8 ristoranti su 10 ce l'hanno).
-
-Non vendo contratti, non cambio fornitori.
-Basta una foto delle ultime 3 bollette su WhatsApp.
-
-Messaggiami o chiamami: **340 971 8937**
-
-In 24 ore ti dico com'è. Se non c'è nulla, arrivederci.
-
----
-
-## Cosa dire al telefono prima di chiudere (se non ti passano il titolare)
-
-**Loro:** "Non posso darle il numero del titolare, non è mai qui."
-
-**Tu:** "Capisco. Le lascio una mail breve che può inoltrargli. Gliela scrivo ora:
-
-> *'Buongiorno, Marco Morello, tecnico. Controllo gratis se nella bolletta c'è energia reattiva — 8 ristoranti su 10 hanno questa penale e nessuno gliel'ha mai detto. Mi mandi le ultime 3 bollette su WhatsApp 340 971 8937, in 24 ore le dico com'è.'*
-
-Gliela inoltro per mail o gliela lascio scritta?"
+Ing. Marco Morello - Tel. 3409718937
+Energy Strategy & Efficiency
+M&M Energy Lab
