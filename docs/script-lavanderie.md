@@ -6,91 +6,74 @@
 
 ---
 
+## Il Problema: "Ho già un consulente"
+
+L'obiezione è un riflesso automatico. La parola "consulente energetico" è bruciata. La strategia: **non competere, specializzati**.
+
+### 3 regole
+
+1. **Non dire "consulente energetico".** Usa "tecnico", "analista consumi".
+2. **Sii specifico.** "Energia reattiva", "potenza impegnata", "penali motori" — cose che il suo consulente non ha mai controllato.
+3. **Secondo parere.** Non sostituisci nessuno, aggiungi un controllo su UN punto specifico.
+
+---
+
+## Apertura quando dicono "Ho già chi mi segue"
+
+**Loro:** "Ho già un consulente."
+
+**Tu:** "Lo so, infatti non la chiamo per sostituirlo. Io controllo una **sola voce specifica**: l'energia reattiva. Le lavanderie hanno tanti motori (lavatrici, asciugatrici, stirerie) e quasi sempre generano una penale nascosta in bolletta. Il suo consulente probabilmente non l'ha mai guardata perché è una voce tecnica. Se mi manda una foto della seconda pagina, in 2 minuti le dico se c'è o no. Gratis."
+
+---
+
 ## La Chiamata — Versione Completa
 
-### Apertura (15 secondi)
+### Apertura
 
-**Tu:** "Buongiorno, parlo con il titolare?"
+**Tu:** "Buongiorno, parlo con il titolare? Sono Marco Morello, tecnico analisi consumi per lavanderie. Non vendo contratti, non cambio fornitori. Una cosa veloce e la libero."
 
-**Loro:** "Sì."
+### Gancio
 
-**Tu:** "Sono Marco Morello, consulente energetico. Un secondo solo: non vendo contratti luce o gas, non sono un venditore. Lavoro sull'efficienza tecnica."
+**Tu:** "Seguo le lavanderie della zona e c'è un problema comune: motori grandi (lavatrici, asciugatrici) generano energia reattiva, una penale in bolletta che il distributore applica ogni mese. In una lavanderia media parliamo di 300-800€ all'anno di spreco. Il suo consulente ha mai controllato la voce energia reattiva in bolletta?"
 
-> Fermati. Deve sentire "non vendo" per abbassare la guardia.
+**Loro:** "Non mi sembra..."
 
----
+**Tu:** "Foto della seconda pagina e glielo dico in 2 minuti. Se non c'è, arrivederci."
 
-### Il Gancio (30 secondi)
+### Richiesta Diretta
 
-**Tu:** "La chiamo perché seguo le lavanderie della zona e c'è un tema che si ripete. Voi avete macchinari che consumano tanto e in modo continuo — lavatrici industriali, asciugatrici, stirerie — e spesso ci sono due problemi: penali per energia reattiva dai motori, e un contratto con potenza impegnata più alta del necessario. In una lavanderia media parliamo di 300-800€ all'anno di sprechi eliminabili."
+**Tu:** "Ha una bolletta sottomano?"
 
-**Loro:** "Che vorrebbe fare?"
+- **Se sì:** "Mi mandi la seconda pagina su WhatsApp."
+- **Se no:** "Le mando un WhatsApp ora. Quando ha un attimo mi gira le ultime 3 bollette."
 
-**Tu:** "Analizzo le bollette — gratis — e le dico esattamente dove stanno uscendo soldi in più. Se c'è margine, risolviamo con un piccolo intervento tecnico. Se non c'è, amen."
-
----
-
-### La Richiesta Diretta
-
-**Tu:** "Ha le bollette a portata? Anche una foto."
-
-- **Se dice sì:** "Mi mandi la seconda pagina su WhatsApp. In 2 minuti le dico se sta pagando penali reattive."
-- **Se dice no:** "Le mando un messaggio ora. Quando ha un attimo, mi giri le ultime 3 bollette. Più ne vedo, più preciso sono."
-
----
-
-### Gestione Obiezioni
+### Obiezioni
 
 | Obiezione | Risposta |
 |-----------|----------|
-| "Non ho tempo" | "Mi mandi le bollette su WhatsApp quando chiude. Domani mattina ha già la risposta, zero impegno." |
-| "Il mio tecnico segue già" | "Il tecnico manutiene i macchinari, ma spesso non guarda le voci in bolletta. Io leggo solo quello. Il controllo è gratuito, se non trova nulla ha perso un minuto." |
-| "Abbiamo già cambiato fornitore" | "Le penali reattive non dipendono dal fornitore, ma dal distributore locale. Cambiare fornitore non risolve." |
-| "Quanto costa?" | "Zero. L'analisi è gratuita. Se trovo risparmio, ci accordiamo su una percentuale. Se non trovo niente, arrivederci." |
-| "Non abbiamo problemi" | "Infatti potreste essere a posto. Ma se lo sono 2 lavanderie su 10, le altre 8 hanno penali senza saperlo. 5 minuti per controllare?" |
+| "Ho già un consulente" | "Non lo sostituisco. Controllo solo una voce tecnica specifica: energia reattiva. Il 90% dei consulenti non la guarda." |
+| "Non ho tempo" | "Mi mandi le bollette su WhatsApp quando chiude, domani ha la risposta." |
+| "Abbiamo già cambiato fornitore" | "La penale reattiva non dipende dal fornitore ma dal distributore. Cambiare non risolve." |
+| "Quanto costa?" | "Gratis. Se trovo margine, percentuale sul risparmio." |
 
----
+### Chiusura
 
-### La Chiusura
-
-**Tu:** "Le mando un WhatsApp col mio contatto. Quando ha 2 minuti mi inoltra le ultime 3 bollette in foto. Le controllo stasera e domani mattina la richiamo io col risultato. Va bene?"
-
-**Loro:** "D'accordo."
-
-**Tu:** "Perfetto, buon lavoro e a domani."
-
----
-
-## Variante Breve
-
-> Se senti fretta
-
-**Tu:** "Marco Morello, consulente energetico. Non vendo contratti. Seguo le lavanderie della zona e 8 su 10 hanno penali in bolletta dai motori industriali. Analizzo gratis le sue ultime 3 bollette, se c'è risparmio glielo dico. Mi le manda su WhatsApp? Domani ha risposta."
+**Tu:** "Le mando un WhatsApp ora. Quando ha 2 minuti mi inoltra le ultime 3 bollette e domani le scrivo il risultato."
 
 ---
 
 ## Cosa cercare nelle bollette (Lavanderie)
 
-1. **Energia reattiva** — lavatrici, asciugatrici, stirerie hanno grossi motori. Il cosφ è quasi sempre sotto soglia.
-2. **Potenza impegnata** — spesso sovradimensionata. I macchinari partono a scaglioni ma il contratto è tarato sul picco.
-3. **Consumi gas** — se hanno generatore vapore o caldaia per stireria. Possibile ottimizzazione caldaia.
-4. **Volumi** — sui grandi volumi di consumo, anche 0,5 cent/kWh di differenza valgono migliaia di euro all'anno.
+1. **Energia reattiva** — problema #1. Motori grandi generano sfasamento.
+2. **Potenza impegnata** — spesso sovradimensionata.
+3. **Consumi gas** — caldaia per stireria. Possibile ottimizzazione.
+4. **Volumi** — sui grandi consumi, ogni errore costa migliaia di euro.
 
 ---
 
-## Post-analisi
+## Frasi chiave
 
-**Se trovi penale reattiva:**
-> "Buongiorno, ho visto le bollette. C'è una penale energia reattiva di €XX al mese. Con un rifasatore da €1.200 la elimina e si ripaga in [X mesi]. Le interessa che le spieghi come funziona?"
-
-**Se trovi potenza sovradimensionata:**
-> "Lei ha un contratto da XX kW ma il suo picco reale è YY kW. Può ridurre la potenza impegnata e risparmiare €ZZ all'anno senza alcun intervento. Vuole che proceda?"
-
----
-
-## Frasi da ricordare
-
-- "Le lavanderie hanno i consumi più alti tra le PMI. Ogni spreco è moltiplicato."
-- "Sui volumi che avete, anche un piccolo errore di inquadramento costa migliaia di euro."
-- "Non vendo nulla, controllo solo la tecnica."
-- "Se è tutto a posto, glielo dico in 2 minuti."
+- "Non vendo contratti, controllo l'energia reattiva."
+- "Le lavanderie con motori hanno quasi sempre penali."
+- "8 su 10 hanno questa voce in bolletta e nessuno gliel'ha mai detta."
+- "2 minuti, gratis. Se non c'è nulla, arrivederci."

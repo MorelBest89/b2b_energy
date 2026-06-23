@@ -6,91 +6,74 @@
 
 ---
 
+## Il Problema: "Ho già un consulente"
+
+L'obiezione è un riflesso automatico. La parola "consulente energetico" è bruciata. La strategia: **non competere, specializzati**.
+
+### 3 regole
+
+1. **Non dire "consulente energetico".** Usa "tecnico", "analista consumi".
+2. **Sii specifico.** "Energia reattiva", "penali motori", "cosφ" — cose che il suo consulente non ha mai controllato.
+3. **Secondo parere.** Non sostituisci nessuno, aggiungi un controllo su UN punto specifico.
+
+---
+
+## Apertura quando dicono "Ho già chi mi segue"
+
+**Loro:** "Ho già un consulente."
+
+**Tu:** "Lo so, infatti non la chiamo per sostituirlo. Io controllo una **sola voce specifica** che il 90% dei consulenti generalisti non guarda: l'energia reattiva. Le officine hanno torni, presse, compressori, saldatrici — tutti motori che generano una penale nascosta in bolletta. Se mi manda una foto della seconda pagina, in 2 minuti le dico se c'è o no. È un secondo parere gratuito."
+
+---
+
 ## La Chiamata — Versione Completa
 
-### Apertura (15 secondi)
+### Apertura
 
-**Tu:** "Buongiorno, parlo con il titolare?"
+**Tu:** "Buongiorno, parlo con il titolare? Sono Marco Morello, tecnico analisi consumi per officine. Non vendo contratti, non cambio fornitori. Una cosa veloce e la libero."
 
-**Loro:** "Sì."
+### Gancio
 
-**Tu:** "Sono Marco Morello, consulente energetico. Una cosa breve: non vendo contratti luce o gas, non sono un venditore. Mi occupo di efficienza tecnica per le officine."
+**Tu:** "Seguo le officine della zona e c'è un problema tecnico comune: i motori di torni, presse e compressori generano energia reattiva, una penale in bolletta che il distributore applica ogni mese. In un'officina media parliamo di 200-500€ all'anno di spreco. Il suo consulente ha mai controllato la voce energia reattiva?"
 
-> Stop. Lascia che elabori "non vendo".
+**Loro:** "Non credo..."
 
----
+**Tu:** "Foto della seconda pagina e glielo dico in 2 minuti. Se non c'è, arrivederci."
 
-### Il Gancio (30 secondi)
+### Richiesta Diretta
 
-**Tu:** "La chiamo perché seguo le officine della zona e c'è un problema tecnico comune. Con tutti i motori che avete — torni, presse, saldatrici, compressori — quasi sempre c'è **energia reattiva** in bolletta. È una penale che il distributore applica quando i motori 'sporcano' la corrente. In un'officina media parliamo di 200-500€ all'anno buttati. E non dipende dal fornitore, si risolve con un intervento tecnico sull'impianto."
+**Tu:** "Ha una bolletta lì?"
 
-**Loro:** "Come faccio a sapere se c'è?"
+- **Se sì:** "Mi mandi la seconda pagina su WhatsApp."
+- **Se no:** "Le mando un WhatsApp ora. Quando ha un attimo mi gira le ultime 3 bollette."
 
-**Tu:** "Glielo dico io in 2 minuti. Basta una foto della bolletta."
-
----
-
-### La Richiesta Diretta
-
-**Tu:** "Ha una bolletta lì? Anche una foto dal telefono."
-
-- **Se dice sì:** "Mi mandi la seconda pagina su WhatsApp. Quella coi dati tecnici. Vedo subito se c'è penale."
-- **Se dice no:** "Le mando un WhatsApp ora. Quando ha un attimo mi inoltra le ultime 3 bollette. Meglio 3 per vedere il trend."
-
----
-
-### Gestione Obiezioni
+### Obiezioni
 
 | Obiezione | Risposta |
 |-----------|----------|
-| "Non ho tempo" | "Capisco. Le mando un messaggio, mi gira le bollette quando chiude. Domani ha la risposta." |
-| "Lo guarda il mio elettricista" | "L'elettricista mantiene l'impianto, ma raramente controlla le voci in bolletta. Il controllo è gratis, se trova niente ha speso un minuto." |
-| "Cambio fornitore ogni anno" | "Il fornitore non c'entra. La penale reattiva la applica il distributore, non chi vende l'energia. Cambiare non risolve." |
-| "Quanto costa l'intervento?" | "Prima vediamo se c'è il problema. L'analisi è gratis. Se c'è, le dò il costo dell'intervento e il risparmio. Se non si ripaga in meno di un anno, non lo facciamo." |
-| "Troppe telefonate, non mi interessa" | "Ho capito, scusi il disturbo. Le lascio il mio numero: se le arriva una bolletta alta e vuole un parere, mi chiami pure." |
+| "Ho già un consulente" | "Non lo sostituisco. Controllo solo energia reattiva, una voce tecnica che la maggior parte dei consulenti non guarda." |
+| "Non ho tempo" | "Mi mandi le bollette su WhatsApp quando chiude, domani ha la risposta." |
+| "Cambio fornitore ogni anno" | "Il fornitore non c'entra. La penale reattiva è del distributore locale." |
+| "Quanto costa?" | "Gratis. Se trovo margine, percentuale sul risparmio." |
 
----
+### Chiusura
 
-### La Chiusura
-
-**Tu:** "Le mando un WhatsApp subito. Quando ha 2 minuti mi gira le ultime 3 bollette in foto. Controllo e domani la richiamo con il risultato. Ok?"
-
-**Loro:** "Sì, va bene."
-
-**Tu:** "Perfetto, buona produzione e a domani."
-
----
-
-## Variante Breve
-
-> Uso diretto
-
-**Tu:** "Marco Morello, consulente energetico. Non vendo contratti. Le officine con motori come la sua hanno penali energetiche in 8 casi su 10. Analizzo gratis le ultime 3 bollette, le dico se sta buttando soldi. Mi le manda su WhatsApp?"
+**Tu:** "Le mando un WhatsApp ora. Quando ha 2 minuti mi inoltra le ultime 3 bollette e domani le scrivo il risultato."
 
 ---
 
 ## Cosa cercare nelle bollette (Officine)
 
-1. **Energia reattiva** — il problema #1. Torni, presse, compressori, saldatrici: tutti motori che generano sfasamento.
-2. **Potenza impegnata** — spesso i macchinari partono tutti insieme al mattino. Il picco determina la potenza contrattuale. Se il picco è occasionale, si può ridurre.
-3. **Aria compressa** — i compressori consumano tanto. Verificare perdite e gestione.
-4. **Illuminazione** — se ancora al neon/alogena, il LED ripaga in 1-2 anni.
+1. **Energia reattiva** — problema #1. Torni, presse, compressori, saldatrici.
+2. **Potenza impegnata** — picchi all'avvio macchinari, spesso sovradimensionata.
+3. **Aria compressa** — perdite e gestione compressori.
+4. **Illuminazione** — se al neon, LED ripaga in 1-2 anni.
 
 ---
 
-## Post-analisi
+## Frasi chiave
 
-**Se trovi penale reattiva:**
-> "Buongiorno, ho controllato. Ha una penale energia reattiva di €XX al mese. Un rifasatore da circa €1.500 la elimina e si ripaga in meno di un anno. Le interessa?"
-
-**Se trovi potenza sovradimensionata:**
-> "Il suo contratto è da XX kW ma il massimo che usa è YY kW. Può ridurre e risparmiare €ZZ all'anno senza muovere un dito."
-
----
-
-## Frasi da ricordare
-
-- "Le officine con motori hanno quasi sempre penali reattive."
-- "Non cambio fornitore, risolvo il problema tecnico."
-- "Se l'intervento non si ripaga in meno di un anno, non ve lo propongo."
-- "Un controllo gratuito è meglio di 500€ buttati all'anno."
+- "Non vendo contratti, controllo l'energia reattiva."
+- "Le officine con motori hanno quasi sempre penali."
+- "Non cambio fornitore, controllo una voce che il suo consulente non guarda."
+- "2 minuti, gratis. Se non c'è nulla, arrivederci."

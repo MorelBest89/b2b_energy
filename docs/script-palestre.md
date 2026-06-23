@@ -6,91 +6,73 @@
 
 ---
 
+## Il Problema: "Ho già un consulente"
+
+L'obiezione è un riflesso automatico. La parola "consulente energetico" è bruciata. La strategia: **non competere, specializzati**.
+
+### 3 regole
+
+1. **Non dire "consulente energetico".** Usa "tecnico", "analista consumi".
+2. **Sii specifico.** "Potenza impegnata", "quota fissa sovradimensionata" — cose che il suo consulente non ha mai controllato.
+3. **Secondo parere.** Non sostituisci nessuno, aggiungi un controllo su UN punto specifico.
+
+---
+
+## Apertura quando dicono "Ho già chi mi segue"
+
+**Loro:** "Ho già un consulente."
+
+**Tu:** "Lo so, infatti non la chiamo per sostituirlo. Io controllo una **sola cosa** che la maggior parte dei consulenti non guarda: la potenza impegnata. Le palestre spesso hanno contratti tarati su picchi che non esistono più e pagano kW fissi ogni mese che non usano. Se mi manda una foto della bolletta, in 2 minuti le dico se sta pagando più del dovuto o no. Gratis."
+
+---
+
 ## La Chiamata — Versione Completa
 
-### Apertura (15 secondi)
+### Apertura
 
-**Tu:** "Buongiorno, parlo con il titolare o il direttore?"
+**Tu:** "Buongiorno, parlo con il titolare o il direttore? Sono Marco Morello, tecnico analisi consumi per centri sportivi. Non vendo contratti, non cambio fornitori. Una cosa veloce e la libero."
 
-**Loro:** "Sì, sono io."
+### Gancio
 
-**Tu:** "Marco Morello, consulente energetico, la chiamo per una cosa veloce. Premessa: non vendo contratti luce o gas, non sono un commerciale. Lavoro sulla parte tecnica delle bollette."
+**Tu:** "Seguo le palestre della zona e c'è un problema che torna sempre: pagano una **quota potenza** più alta del necessario. Il contratto è rimasto uguale da anni ma i consumi sono cambiati. Il suo consulente ha mai controllato la potenza impegnata?"
 
-> Fermati. Ha appena sentito "non vendo" -> difese abbassate.
+**Loro:** "Non lo so..."
 
----
+**Tu:** "Foto della seconda pagina della bolletta e glielo dico in 2 minuti. Se è tutto ok, arrivederci."
 
-### Il Gancio (30 secondi)
+### Richiesta Diretta
 
-**Tu:** "Sto facendo un giro nelle palestre della zona per un'analisi gratuita e c'è un problema che torna sempre. Le palestre hanno un consumo altissimo di giorno — climatizzazione, docce, macchinari — e spesso pagano una **quota potenza** sovradimensionata. In pratica hanno un contratto pensato per un picco che non esiste più, e ogni mese buttano via 100-200€ di quota fissa."
+**Tu:** "Ha una bolletta lì?"
 
-**Loro:** "Come sarebbe?"
+- **Se sì:** "Mi mandi la seconda pagina su WhatsApp."
+- **Se no:** "Le mando un WhatsApp ora. Quando ha un attimo mi gira le ultime 3 bollette."
 
-**Tu:** "Il contratto è tarato su una potenza impegnata più alta del necessario. Se alle 15:00 accendi tutto e consumi 50 kW, ma il tuo contratto è da 70 kW, stai pagando 20 kW che non usi mai. Sono soldi in più ogni mese. Con le bollette verifico se è il vostro caso."
-
----
-
-### La Richiesta Diretta
-
-**Tu:** "Avete una bolletta sottomano? Anche una foto da cellulare."
-
-- **Se dice sì:** "Mandami su WhatsApp la seconda pagina, quella tecnica. In 2 minuti ti dico se c'è margine."
-- **Se dice no:** "Ti mando un WhatsApp ora. Quando hai un attimo mi giri le ultime 3 bollette — meglio 3 per vedere l'andamento dei consumi."
-
----
-
-### Gestione Obiezioni
+### Obiezioni
 
 | Obiezione | Risposta |
 |-----------|----------|
-| "Non ho tempo" | "Ti mando un messaggio e mi giri le bollette quando chiudi stasera. Domani mattina hai già la risposta." |
-| "Ci pensa il commercialista" | "Il commercialista vede il totale, non la composizione tecnica. La quota potenza è un dettaglio che sfugge a chi non legge la seconda pagina." |
-| "Abbiamo già il fotovoltaico" | "Ancora meglio. Con FV i consumi cambiano e spesso la potenza contrattuale è sbagliata. Vuole che controlli se il contratto è ancora adatto?" |
-| "Non mi interessa" | "Capisco. Se cambia idea, ho già il suo numero. Le ultimo 3 bollette? 5 minuti e le dico se risparmia o no." |
-| "Quanto costa?" | "Zero. L'analisi è gratuita. Se trovo risparmio e procediamo, ci accordiamo su una percentuale. Se non trovo nulla, amici come prima." |
+| "Ho già un consulente" | "Non lo sostituisco. Controllo solo un dato specifico: la potenza impegnata. È un secondo parere gratuito." |
+| "Non ho tempo" | "Mi mandi le bollette su WhatsApp e domani ha la risposta. Zero chiamate." |
+| "Non mi interessa" | "Capisco. Se cambia idea, il mio numero è già sul WhatsApp che le ho mandato." |
+| "Quanto costa?" | "Gratis. Se trovo margine e procediamo, percentuale sul risparmio." |
 
----
+### Chiusura
 
-### La Chiusura
-
-**Tu:** "Ti mando un WhatsApp ora col mio numero. Quando hai 2 minuti, girarmi le ultime 3 bollette in foto. Domani mattina ti richiamo io col risultato. Ti va?"
-
-**Loro:** "Ok."
-
-**Tu:** "Perfetto. Buon allenamento e buon lavoro!"
-
----
-
-## Variante Breve
-
-> Usala se senti che vuole chiudere subito
-
-**Tu:** "Marco Morello, consulente energetico. Due secondi: non vendo contratti. Le palestre in zona pagano tutte una quota potenza più alta del dovuto. Controllo le bollette gratis e se c'è margine glielo dico. Mi manda le ultime 3 su WhatsApp? Domani ha la risposta."
+**Tu:** "Le mando un WhatsApp ora. Quando ha 2 minuti mi inoltra le ultime 3 bollette e domani le scrivo il risultato. D'accordo?"
 
 ---
 
 ## Cosa cercare nelle bollette (Palestre)
 
-1. **Quota potenza** — confronta kW impegnati vs kW usati. Se c'è differenza >10%, si può ridurre.
-2. **Energia reattiva** — motori di tapis roulant, condizionamento, pompe piscina generano sfasamento.
-3. **Fasce orarie** — se la palestra lavora solo in F1 (mattina-pomeriggio) e ha tariffa monooraria, conviene bioraria.
-4. **Climatizzazione** — costo maggiore in estate/inverno. Si può ottimizzare con programmazione.
+1. **Potenza impegnata** — confronta kW contrattuali vs kW reali.
+2. **Energia reattiva** — tapis roulant, condizionamento, pompe.
+3. **Fasce orarie** — se lavorano solo in F1, tariffa bioraria può non convenire.
+4. **Climatizzazione** — costo maggiore in estate/inverno.
 
 ---
 
-## Post-analisi
+## Frasi chiave
 
-**Se trovi margine:**
-> "Buongiorno [nome], ho visto le bollette. Lei sta pagando €X all'anno di potenza impegnata non utilizzata. Abbassando da Y kW a Z kW risparmia €W all'anno, senza cambiare fornitore. Le preparo la richiesta?"
-
-**Se non trovi nulla:**
-> "Buongiorno [nome], ho controllato. La sua configurazione è già ottimizzata, non ci sono sprechi evidenti. Se in futuro cambiano i consumi, mi faccia un fischio. Buon lavoro!"
-
----
-
-## Frasi da ricordare
-
-- "Non vendo contratti, vendo tecnica."
-- "Le palestre pagano tutte una quota potenza sbagliata. Quasi tutte."
-- "Un controllo gratuito non le costa nulla, ma potrebbe farla risparmiare."
-- "Non cambio fornitore, controllo il ridimensionamento del contratto."
+- "Non vendo contratti, controllo la potenza impegnata."
+- "Le palestre hanno quasi tutte la potenza contrattuale sbagliata."
+- "2 minuti di controllo gratuito. Se non c'è nulla, arrivederci."

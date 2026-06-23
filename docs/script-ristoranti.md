@@ -2,86 +2,89 @@
 
 > Target: titolare/gestore di ristorante, pizzeria, trattoria
 > Obiettivo: ottenere le ultime 3 bollette via WhatsApp/email
-> Proposta: analisi gratuita, si paga solo con una % del risparmio trovato
+> Proposta: analisi gratuita, % sul risparmio trovato
+
+---
+
+## Il Problema: "Ho già un consulente energetico"
+
+L'obiezione che stai ricevendo non è una chiusura, è un **riflesso automatico**. Il ristoratore sente "consulente energetico" e pensa "un altro che vuole cambiarmi contratto". La strategia non è insistere, ma **cambiare angolo**.
+
+### 3 regole per superare lo scoglio
+
+1. **Non dire "consulente energetico" all'apertura.** Quella parola oggi è bruciata. Usa "tecnico", "ingegnere", "analista consumi".
+2. **Non parlare di risparmio generico.** Sii specifico: "energia reattiva", "seconda pagina", "penali motori".
+3. **Usa il "secondo parere".** Un altro paio di occhi non costa nulla.
+
+---
+
+## Apertura quando dicono "Ho già chi mi segue"
+
+**Loro:** "Ho già un consulente energetico, non mi serve."
+
+**Tu:** "Lo so, infatti non la chiamo per sostituirlo. Io controllo una **sola voce specifica** della bolletta che il 90% dei consulenti generalisti non guarda: si chiama energia reattiva, una penale nascosta legata ai motori dei frigo e dei forni. Se mi manda una foto della seconda pagina, in 2 minuti le dico se c'è o no. È un secondo parere gratuito, niente di più."
+
+---
+
+## Apertura diretta (dopo che ti hanno rimbalzato)
+
+**Tu:** "Buongiorno, Marco Morello. Due secondi e la libero. Premessa: non vendo contratti. Controllo solo se nella seconda pagina della bolletta c'è una voce chiamata **energia reattiva** che in 8 ristoranti su 10 fa perdere 100-250€ all'anno. Il suo consulente gliel'ha mai mostrata?"
+
+**Loro:** "No... cos'è?"
+
+**Tu:** "Una penale generata dai motori dei frigo. Se c'è, si elimina. Se non c'è, amen. Mi mandi una foto della seconda pagina su WhatsApp e le dico tutto."
 
 ---
 
 ## La Chiamata — Versione Completa
 
-### Apertura (15 secondi)
+### Apertura
 
-**Tu:** "Buongiorno, parlo con il titolare?"
+**Tu:** "Buongiorno, parlo con il titolare? Sono Marco Morello, tecnico analisi consumi per ristoranti. Non vendo contratti, non cambio fornitori. 2 minuti e la libero."
 
-**Loro:** "Sì, sono io."
+### Gancio
 
-**Tu:** "Marco Morello, sono un consulente energetico qui di [zona]. La chiamo per una cosa veloce: non vendo contratti luce o gas, non sono un commerciale. Lavoro con tecnica."
+**Tu:** "Sto facendo un controllo gratuito sui ristoranti della zona: 8 su 10 hanno una penale nascosta in bolletta dai motori dei frigo e dei forni. Si chiama energia reattiva. Il suo consulente probabilmente non la guarda perché è una voce tecnica. Io controllo solo quella."
 
-> Nota: fermati. Lascia che processi. Hai appena smontato la sua obiezione principale.
+**Loro:** "Come faccio a sapere se c'è?"
 
----
+**Tu:** "Foto della seconda pagina dell'ultima bolletta. In 2 minuti le dico se c'è o no."
 
-### Il Gancio (30 secondi)
+### Richiesta Diretta
 
-**Tu:** "Sto facendo un'analisi gratuita sui ristoranti della zona e in 8 su 10 trovo un problema: penali nascoste in bolletta a causa dei motori dei frigo, delle celle frigorifere e dei forni. Penali che il fornitore non ti dice e che puoi eliminare senza cambiare contratto."
+**Tu:** "Ha una bolletta lì? Anche una foto."
 
-**Loro:** "Che tipo di penali?"
+- **Se sì:** "Mi mandi la seconda pagina su WhatsApp."
+- **Se no:** "Le mando un WhatsApp ora. Quando ha un attimo mi gira le ultime 3 bollette."
 
-**Tu:** "Si chiama energia reattiva. Praticamente i motori elettrici 'sporcano' la corrente e il distributore ti fa pagare un extra ogni mese. In un ristorante medio parliamo di 100-250€ all'anno buttati. Se c'è, risolviamo. Se non c'è, te lo dico e pace."
-
----
-
-### La Richiesta Diretta
-
-**Tu:** "Ti chiedo solo 30 secondi: hai una bolletta sottomano? Anche una foto dal telefono."
-
-- **Se dice sì:** "Mandami su WhatsApp la seconda pagina, quella con i dati tecnici. In 2 minuti ti dico se stai pagando penali o no."
-- **Se dice no:** "Nessun problema. Ti mando un WhatsApp con il mio numero e quando hai un attimo mi giri le ultime 3 bollette. Posso analizzarle meglio se ne vedo 3, capisco l'andamento."
-
----
-
-### Gestione Obiezioni
+### Obiezioni
 
 | Obiezione | Risposta |
 |-----------|----------|
-| "Non ho tempo" | "Infatti non ti chiedo tempo ora. Mi mandi le bollette su WhatsApp quando chiudi stasera, ti rispondo domani mattina con l'analisi. Zero impegno." |
-| "Ho già chi mi segue" | "Il commercialista guarda i conti, io guardo i macchinari. Sono due cose diverse. Spesso le penali tecniche sfuggono perché non sono visibili in partita doppia. Un controllo gratuito non ti costa nulla." |
-| "Non mi fido, troppe truffe" | "Giusto, fai bene. Infatti non ti chiedo un centesimo né un contratto. Ti dico solo se c'è un problema tecnico nella tua bolletta esistente. Se non c'è, arrivederci e grazie." |
-| "Cambio fornitore ogni anno" | "Il fornitore non c'entra con questa voce. La penale la applica il distributore locale, non chi ti vende l'energia. Cambiare fornitore non risolve." |
-| "Quanto costa?" | "Zero. L'analisi è gratuita. Se trovo un margine di risparmio e vuoi procedere, ci accordiamo su una percentuale del risparmio ottenuto. Se non trovo nulla, hai perso 5 minuti." |
+| "Ho già un consulente" | "Non lo sostituisco. Controllo solo una voce tecnica che il 90% dei consulenti non guarda: energia reattiva. Secondo parere gratuito, 2 minuti." |
+| "Non ho tempo" | "Non lo uso. Mi mandi le bollette su WhatsApp quando chiude e domani ha la risposta." |
+| "Non mi fido" | "Giusto. Non le chiedo soldi, contratti né firme. Solo una foto." |
+| "Cambio fornitore ogni anno" | "Il fornitore non c'entra. La penale reattiva la applica il distributore locale, non dipende dal contratto." |
+| "Quanto costa?" | "Zero. Se trovo margine e procediamo, percentuale sul risparmio. Se no, arrivederci." |
+
+### Chiusura
+
+**Tu:** "Le mando un WhatsApp ora. Quando ha 2 minuti mi inoltra le ultime 3 bollette in foto. Le controllo stasera e domani mattina le scrivo il risultato. D'accordo?"
 
 ---
 
-### La Chiusura (assicurati le bollette)
+## Cosa fare dopo
 
-**Tu:** "Allora ti mando un WhatsApp ora. Quando hai 2 minuti mi giri le ultime 3 bollette — anche in foto. Più ne vedo, più preciso sono. Ok?"
-
-**Loro:** "Va bene."
-
-**Tu:** "Perfetto. Controllo stasera e domani mattina ti mando io il risultato. Se c'è qualcosa da fare, ti spiego tutto. Se non c'è, ti levo il pensiero. Buon lavoro!"
-
----
-
-## Variante Breve (se è di fretta)
-
-> Usala quando senti che sta per attaccare
-
-**Tu:** "Buongiorno, Marco Morello, consulente energetico. Non vendo niente, non cambio contratti. 9 ristoranti su 10 nella zona hanno penali in bolletta dai motori dei frigo. Io le trovo e le elimino. Mi mandi le ultime 3 bollette su WhatsApp, le analizzo gratis, se c'è risparmio ti dico come. D'accordo?"
+1. **Conferma:** "Ricevute, domani mattina le mando il risultato."
+2. **Analisi:** Cerca "Energia Reattiva" o "cosφ" in bolletta.
+3. **Risposta:** "Buongiorno, c'è una penale di €XX/mese. Con un rifasatore la elimina, si ripaga in X mesi. Vuole che glielo spieghi?"
+4. **Guadagno:** % sul risparmio ottenuto.
 
 ---
 
-## Cosa fare dopo che ti manda le bollette
+## Frasi chiave
 
-1. **Conferma ricezione:** "Ricevute, grazie. Le controllo stasera e domani ti mando il risultato."
-2. **Analisi:** Cerca la voce "Energia Reattiva" o "cosφ". Se c'è penale, hai il cliente.
-3. **Risposta il giorno dopo:** "Buongiorno, ho visto le bollette. Sulla bolletta del [mese] c'è una penale di €XX per energia reattiva. Possiamo eliminarla con un rifasatore. Te lo spiego in 5 minuti al telefono, quando sei libero?"
-4. **Proposta:** Rifasatore + eventuali LED/sensori. Il tuo guadagno: % sul risparmio ottenuto.
-
----
-
-## Frasi da ricordare
-
-- "Non vendo contratti, vendo risparmio."
-- "Non cambio fornitore, risolvo problemi tecnici."
-- "Non ti costa nulla sapere se stai buttando soldi."
-- "Se non c'è niente da fare, te lo dico in 2 minuti e arrivederci."
-- "Le ultime 3 bollette mi danno l'andamento, con una sola vedo meno."
+- "Non vendo contratti, vendo un secondo parere tecnico."
+- "Controllo una voce che il suo consulente non guarda."
+- "8 ristoranti su 10 hanno questa penale e nessuno gliel'ha mai detto."
+- "2 minuti, gratis. Se non c'è nulla, arrivederci."
