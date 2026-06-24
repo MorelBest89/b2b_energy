@@ -1,35 +1,18 @@
 ﻿
-OFFICINE MECCANICHE
+RISTORANTI
 
 **Tu:** "Buongiorno sono Marco Morello, parlo con il titolare?"
 
 **Loro:** "Sì, sono io."
 
 
-**Tu:** Piacere, sono un ingegnere e per farmi conoscere sto regalando un servizio di analisi alle attività che utilizzano grossi motori trifase in quanto sono quelli che generano le maggiori problematiche. Io non sono quello che vende contratti luce o gas e non voglio farle cambiare gestore dell'energia, purtroppo spesso vengo scambiato con quella categoria.
+**Tu:** Piacere, sono un ingegnere energetico e per farmi conoscere sto regalando un servizio di analisi alle attività che utilizzano grossi motori trifase. 
+
+Io non sono quello che vende contratti luce o gas e non voglio farle cambiare gestore dell'energia, purtroppo spesso vengo scambiato con quella categoria.
 
 Quello che chiedo per poter sviluppare l'analisi è la foto (o scansione) della vostra ultima bolletta (o meglio ancora le ultime 3 per essere più preciso) in modo da analizzare tutti i valori e controllare se sono presenti voci di potenza reattiva.
 
 Consideri che io una volta ultimata l'analisi vi mando un report dove potete vedere tutte le mie considerazioni e se siete interessati ad approfondire il discorso potete tranquillamente ricontattarmi per fissare una chiamata o incontro.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
