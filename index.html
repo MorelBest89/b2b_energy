@@ -408,7 +408,7 @@
     e.preventDefault();
     if (stelleInput.value === '0') { alert('Seleziona un numero di stelle.'); return; }
     var data = new FormData(form);
-    fetch('https://formspree.io/f/ILTUOCODICE', {
+    fetch('https://formspree.io/f/mrewpppa', {
       method: 'POST', body: data, headers: { 'Accept': 'application/json' }
     }).then(function(r){
       if (r.ok) { form.style.display = 'none'; msg.style.display = 'block'; }
