@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Report Energetico — Timpani Tonino Secondo</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+    background: #f3f4f6;
+    color: #1f2937;
+    line-height: 1.6;
+    padding: 40px 20px;
+  }
+  .report {
+    max-width: 720px; margin: 0 auto;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,.08);
+  }
+  .header {
+    background: linear-gradient(135deg, #064e3b, #059669);
+    color: #fff; padding: 20px 40px 16px;
+  }
+  .header h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: 4px; letter-spacing: -.02em; }
+  .header .sub { font-size: .85rem; opacity: .8; margin-bottom: 20px; }
+  .header .meta { display: flex; flex-wrap: wrap; gap: 24px; font-size: .8rem; opacity: .85; }
+  .header .meta span { display: flex; align-items: center; gap: 6px; }
+  .body { padding: 32px 40px 40px; }
+  .section { margin-bottom: 32px; }
+  .section-title {
+    font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em;
+    color: #059669; margin-bottom: 12px;
+  }
+  .card {
+    background: #f9fafb; border-radius: 10px; padding: 20px;
+    border: 1px solid #e5e7eb; margin-bottom: 12px;
+  }
+  .card:last-child { margin-bottom: 0; }
+  .card h3 { font-size: 1rem; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+  .card .badge {
+    display: inline-block; font-size: .7rem; font-weight: 700; padding: 2px 10px; border-radius: 12px;
+    margin-left: auto;
+  }
+  .badge-red { background: #fef2f2; color: #dc2626; }
+  .badge-green { background: #d1fae5; color: #059669; }
+  .badge-yellow { background: #fef9c3; color: #b45309; }
+  .row { display: flex; justify-content: space-between; padding: 4px 0; font-size: .88rem; }
+  .row .label { color: #6b7280; }
+  .row .value { font-weight: 600; }
+  .row .save { color: #059669; font-weight: 700; }
+  .table {
+    width: 100%; border-collapse: collapse; font-size: .85rem; margin-top: 8px;
+  }
+  .table th {
+    background: #f3f4f6; text-align: left; padding: 8px 12px; font-weight: 600;
+    border-bottom: 2px solid #e5e7eb;
+  }
+  .table td { padding: 8px 12px; border-bottom: 1px solid #e5e7eb; }
+  .table tr:last-child td { border-bottom: none; }
+  .table .highlight td { background: #ecfdf5; font-weight: 600; }
+  .cta-box {
+    background: linear-gradient(135deg, #064e3b, #059669);
+    color: #fff; border-radius: 10px; padding: 24px; text-align: center;
+  }
+  .cta-box h3 { font-size: 1.1rem; margin-bottom: 6px; }
+  .cta-box p { font-size: .85rem; opacity: .85; margin-bottom: 16px; }
+  .cta-box .phone { font-size: 1.3rem; font-weight: 700; letter-spacing: .02em; }
+  .footer { text-align: center; padding: 20px 40px; font-size: .78rem; color: #9ca3af; border-top: 1px solid #e5e7eb; }
+  @media print {
+    @page { margin: 15mm 15mm; }
+    body { background: #fff; padding: 0; color: #000; }
+    .report { max-width: 100%; border-radius: 0; box-shadow: none; }
+    .header { background: #059669 !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; padding: 12px 30px 12px !important; }
+    .header h1, .header .sub, .header .sub a, .header .meta, .header .meta span { color: #fff !important; }
+    .header h1 { font-size: 1.2rem !important; }
+    .header .sub, .header .meta { font-size: .75rem !important; }
+    .header .meta { gap: 12px !important; }
+    .body { padding: 20px 30px 30px !important; }
+    .section { margin-bottom: 16px !important; break-inside: avoid; page-break-inside: avoid; }
+    .section-title { margin-bottom: 6px !important; }
+    .card { padding: 14px 16px !important; margin-bottom: 8px !important; break-inside: avoid; }
+    .card h3 { font-size: .9rem !important; margin-bottom: 4px !important; }
+    .card p { font-size: .78rem !important; margin-bottom: 6px !important; }
+    .row { font-size: .8rem !important; padding: 2px 0 !important; }
+    .table { font-size: .78rem !important; }
+    .table th, .table td { padding: 5px 8px !important; }
+    .badge-red { background: #fef2f2 !important; -webkit-print-color-adjust: exact !important; }
+    .badge-green { background: #d1fae5 !important; -webkit-print-color-adjust: exact !important; }
+    .cta-box { background: #059669 !important; -webkit-print-color-adjust: exact !important; break-inside: avoid; padding: 16px 20px !important; }
+    .cta-box h3 { font-size: 1rem !important; }
+    .cta-box p { font-size: .78rem !important; margin-bottom: 10px !important; }
+    .cta-box .phone { font-size: 1.1rem !important; }
+    .table th { background: #f3f4f6 !important; -webkit-print-color-adjust: exact !important; }
+    .table .highlight td { background: #ecfdf5 !important; -webkit-print-color-adjust: exact !important; }
+    .table .save, .row .save, .highlight td { color: #059669 !important; }
+    .footer { border-top: 1px solid #ccc; font-size: .7rem !important; padding: 10px 30px !important; }
+    img { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  }
+    body { padding: 16px 10px; }
+    .header, .body { padding: 24px 20px; }
+    .meta { flex-direction: column; gap: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="report">
+
+  <div class="header">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;">
+      <div>
+        <h1>Report di Efficienza Energetica</h1>
+        <div class="sub"><a href="https://mm-energy-lab.marco89-morello.workers.dev" style="color:#fff;text-decoration:underline;opacity:.85;">M&amp;M Energy Lab</a> — Ing. Marco Morello</div>
+      </div>
+      <img src="../logo.jpg" alt="M&amp;M Energy Lab" style="height:128px;width:auto;">
+    </div>
+    <div class="meta">
+      <span>📋 Cliente: Timpani Tonino Secondo</span>
+      <span>📍 Varese (VA)</span>
+      <span>📅 Giugno 2026</span>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <!-- 1. Riepilogo -->
+    <div class="section">
+      <div class="section-title">1. Riepilogo Generale</div>
+      <div class="card">
+        <div class="row"><span class="label">Fornitore attuale</span><span class="value">Enegan SPA — Supersicura 2.0</span></div>
+        <div class="row"><span class="label">Spesa trimestre (mar-mag)</span><span class="value">€ 3.688</span></div>
+        <div class="row"><span class="label">Spesa annua stimata</span><span class="value" style="font-size:1.1rem;">€ 14.750</span></div>
+        <div class="row"><span class="label">Consumo annuo stimato</span><span class="value">~40.000 kWh</span></div>
+        <div class="row"><span class="label">Potenza impegnata</span><span class="value">25 kW</span></div>
+        <div class="row"><span class="label">Picco massimo rilevato</span><span class="value">17,15 kW</span></div>
+        <div class="row"><span class="label">Prezzo energia</span><span class="value">~0,175 €/kWh (fisso)</span></div>
+      </div>
+    </div>
+
+    <!-- 2. Interventi con Risparmio Immediato -->
+    <div class="section">
+      <div class="section-title">2. Interventi a Costo Zero</div>
+
+      <div class="card">
+        <h3>🔴 Potenza Impegnata Sbagliata <span class="badge badge-red">RECUPERO IMMEDIATO</span></h3>
+        <p style="font-size:.85rem;color:#6b7280;margin-bottom:10px;">Paga 25 kW ma il suo picco massimo è 17,15 kW — 7-10 kW di potenza che non usa mai.</p>
+        <div class="row"><span class="label">Potenza attuale</span><span class="value">25 kW</span></div>
+        <div class="row"><span class="label">Potenza consigliata</span><span class="value">18 kW</span></div>
+        <div class="row"><span class="label">Risparmio annuo</span><span class="save">€ 250 - 350</span></div>
+        <div class="row"><span class="label">Costo intervento</span><span class="value">€ 0 (pratica amministrativa)</span></div>
+        <p style="font-size:.8rem;color:#059669;margin-top:8px;">✓ Risparmio garantito dalla prossima bolletta, senza investimenti</p>
+      </div>
+
+      <div class="card">
+        <h3>📞 Servizi Telefonici Non Richiesti <span class="badge badge-red">RECUPERO IMMEDIATO</span></h3>
+        <p style="font-size:.85rem;color:#6b7280;margin-bottom:10px;">In ogni bolletta trova € 12,50 per telecomunicazioni. Sa di avere questo servizio? Sa di usarlo?</p>
+        <div class="row"><span class="label">Costo annuo TLC</span><span class="value">€ 150</span></div>
+        <div class="row"><span class="label">Risparmio annuo</span><span class="save">€ 150</span></div>
+        <div class="row"><span class="label">Costo intervento</span><span class="value">€ 0 (disdetta)</span></div>
+      </div>
+    </div>
+
+    <!-- 3. Mercato Energia -->
+    <div class="section">
+      <div class="section-title">3. Confronto Mercato Energia</div>
+      <div class="card">
+        <p style="font-size:.85rem;color:#6b7280;margin-bottom:12px;">Il suo prezzo fisso è bloccato da tempo. Il mercato oggi offre condizioni migliori.</p>
+        <table class="table">
+          <tr><th></th><th>Prezzo kWh</th><th>Spesa materia annua</th></tr>
+          <tr><td>Oggi (Enegan) </td><td>~0,175 €</td><td>~€ 7.000</td></tr>
+          <tr><td>Mercato 2026 </td><td>~0,10-0,12 €</td><td>~€ 4.400-4.800</td></tr>
+          <tr class="highlight"><td>Risparmio potenziale</td><td style="color:#059669;">-0,055 €/kWh</td><td style="color:#059669;">-€ 2.000-2.600</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- 4. Energia Reattiva -->
+    <div class="section">
+      <div class="section-title">4. Energia Reattiva</div>
+      <div class="card">
+        <h3>🟠 Cosφ sotto soglia</h3>
+        <p style="font-size:.85rem;color:#6b7280;margin-bottom:10px;">Il suo fattore di potenza è tra 0,84 e 0,91 (soglia 0,95). Oggi paga penali basse (~€ 3/mese) ma l'impianto lavora male.</p>
+        <div class="row"><span class="label">Penale annua oggi</span><span class="value">~€ 36</span></div>
+        <div class="row"><span class="label">Intervento consigliato</span><span class="value">Rifasatore automatico</span></div>
+        <div class="row"><span class="label">Investimento</span><span class="value">€ 800 - 1.200</span></div>
+        <p style="font-size:.8rem;color:#6b7280;margin-top:8px;">Beneficio aggiuntivo: riduzione corrente assorbita e maggiore durata dei motori.</p>
+      </div>
+    </div>
+
+    <!-- 5. Tabella Riepilogativa -->
+    <div class="section">
+      <div class="section-title">5. Riepilogo Interventi</div>
+      <table class="table">
+        <tr><th>#</th><th>Intervento</th><th>Risparmio/anno</th><th>Investimento</th><th>Priorità</th></tr>
+        <tr><td>1</td><td>Riduzione potenza a 18 kW</td><td style="color:#059669;font-weight:700;">€ 250-350</td><td>€ 0</td><td>★★★</td></tr>
+        <tr><td>2</td><td>Disdetta servizi TLC</td><td style="color:#059669;font-weight:700;">€ 150</td><td>€ 0</td><td>★★★</td></tr>
+        <tr><td>3</td><td>Cambio fornitore</td><td style="color:#059669;font-weight:700;">€ 2.000-2.600</td><td>€ 0</td><td>★★★</td></tr>
+        <tr><td>4</td><td>Rifasatore</td><td>~€ 40 + efficienza</td><td>€ 800-1.200</td><td>★★</td></tr>
+        <tr class="highlight" style="background:#ecfdf5;"><td></td><td><strong>TOTALE RECUPERABILE</strong></td><td style="color:#059669;font-weight:700;font-size:1rem;"><strong>€ 2.400 - 3.100/anno</strong></td><td>€ 0*</td><td></td></tr>
+      </table>
+      <p style="font-size:.75rem;color:#9ca3af;margin-top:8px;">* I primi 3 interventi sono a costo zero. Il rifasatore ha un costo ma non è urgente.</p>
+    </div>
+
+    <!-- 6. Proposta -->
+    <div class="section">
+      <div class="section-title">6. Proposta Operativa</div>
+      <div class="cta-box">
+        <h3>Passo dopo passo</h3>
+        <p>1. Parto subito con la riduzione potenza e la disdetta TLC (€ 0, risparmio immediato)<br>
+        2. Le preparo il confronto offerte per il cambio fornitore<br>
+        3. Se vuole, valutiamo insieme il rifasatore<br><br>
+        Il mio compenso è sul risparmio ottenuto, solo dopo che lo vede in bolletta.</p>
+        <div class="phone">340 971 8937</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      M&amp;M Energy Lab — Ing. Marco Morello | Report riservato
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
