@@ -21,3 +21,9 @@ Thumbs.db
 data/batches/
 data/site_texts.json
 data/site_texts.json
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
