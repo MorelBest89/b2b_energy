@@ -1,3 +1,25 @@
+﻿PALESTRE 
+
+**Tu:** "Buongiorno sono Marco Morello, parlo con il titolare?"
+
+**Loro:** "Sì, sono io."
+
+
+**Tu:** Piacere, sono un ingegnere energetico e per farmi conoscere sto regalando un servizio di analisi sui consumi alle attività che utilizzano parecchia energia nella propria attività. 
+
+Io non sono quello che vende contratti luce o gas e non voglio farle cambiare gestore dell'energia, purtroppo spesso vengo scambiato con quella categoria.
+
+
+L’obiettivo dell’analisi è verificare tutte le voci presenti in bolletta per scovare i punti dove si può intervenire senza andare a fare investimenti come fotovoltaico e pompe di calore.
+Questi punti possono essere l’elevata potenza reattiva che comporta penali, lo sforamento dei picchi massimi o il non utilizzo di alcune agevolazioni. Tutte cose che la maggior parte delle imprese non guardano per mancanza di tempo e competenze, i consulenti che fanno i vari cambi dei gestori dell’energia hanno interessi a prendere le commissioni dal cambio ma non hanno le competenze per valutare tecnicamente tutte le varie voci
+
+
+
+Quello che chiedo per poter sviluppare l'analisi è la foto (o scansione) della vostra ultima bolletta (o meglio ancora le ultime 3 per essere più preciso) in modo da analizzare tutti i valori e controllare se sono presenti voci di potenza reattiva.
+
+Consideri che io una volta ultimata l'analisi vi mando un report dove potete vedere tutte le mie considerazioni e se siete interessati ad approfondire il discorso potete tranquillamente ricontattarmi per fissare una chiamata o incontro.
+
+
 # Script Telefonico — Palestre & Centri Sportivi
 
 > Target: direttore, proprietario o responsabile di palestra, centro fitness, piscina
@@ -76,3 +98,4 @@ L'obiezione è un riflesso automatico. La parola "consulente energetico" è bruc
 - "Non vendo contratti, controllo la potenza impegnata."
 - "Le palestre hanno quasi tutte la potenza contrattuale sbagliata."
 - "2 minuti di controllo gratuito. Se non c'è nulla, arrivederci."
+

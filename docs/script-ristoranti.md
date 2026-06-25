@@ -35,6 +35,9 @@ Consideri che io una volta ultimata l'analisi vi mando un report dove potete ved
 
 
 
+
+
+
 # Script Telefonico — Ristoranti & Pizzerie
 
 > Target: titolare/gestore di ristorante, pizzeria, trattoria
