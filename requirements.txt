@@ -1,0 +1,6 @@
+# Dipendenze per genera_report.py
+# Installazione:
+#   pip install -r requirements.txt
+#   playwright install chromium
+
+playwright>=1.40
